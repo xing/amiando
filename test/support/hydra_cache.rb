@@ -2,6 +2,7 @@ module HydraCache
   extend self
 
   attr_accessor :prefix
+  attr_accessor :revision
 
   def setter(request)
     set_cache request

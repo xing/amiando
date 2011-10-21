@@ -2,8 +2,13 @@ require 'test_helper'
 
 describe Amiando::ApiKey do
   before do
-    Amiando.api_key = nil
+    Amiando.api_key   = nil
     HydraCache.prefix = 'ApiKey'
+  end
+
+  after do
+    Amiando.api_key   = nil
+    HydraCache.prefix = nil
   end
 
   describe 'create' do
@@ -31,10 +36,10 @@ describe Amiando::ApiKey do
 
       Amiando.api_key = key.key
 
-      result = Amiando::ApiKey.update(key.id, :enabled => false)
+      update = Amiando::ApiKey.update(key.id, :enabled => false)
       Amiando.run
 
-      result.success.must_equal true
+      update.result.must_equal true
     end
 
     it 'update raises NotAuthorized if apikey doesnt have permission to update the apikey' do
@@ -49,18 +54,5 @@ describe Amiando::ApiKey do
         Amiando.run
       }.must_raise Amiando::Error::NotAuthorized
     end
-
-    it 'update fails if apikey is missing' do
-      key = Amiando::ApiKey.create :name => 'wadus'
-      Amiando.run
-
-      result = Amiando::ApiKey.update(key.id, :enabled => false)
-      Amiando.run
-
-      result.success.must_equal false
-    end
   end
-
-  # it 'raises an error when updating an api key that doesnt exist' do
-  # end
 end

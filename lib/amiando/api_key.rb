@@ -12,7 +12,7 @@ module Amiando
       raise ArgumentError.new('ApiKey name field is mandatory') unless attributes[:name]
 
       object  = new
-      request = post object, '/api/apiKey/create', attributes
+      request = post object, '/api/apiKey/create', :params => attributes
 
       object
     end
@@ -22,21 +22,14 @@ module Amiando
     #
     # @param [Hash] possible attributes that can be updated.
     def self.update(id, attributes)
-      object  = new
-      request = post object, "/api/apiKey/#{id}", attributes
+      object  = Boolean.new(:success)
+      request = post object, "/api/apiKey/#{id}", :params => attributes
 
       object
     end
 
     def populate(response_body)
-      @attributes = {}
-      if response_body['apiKey']
-        response_body['apiKey'].each do |key,val|
-          @attributes[key.to_sym] = val
-        end
-      end
-
-      @success = response_body['success']
+      extract_attributes_from(response_body, 'apiKey')
     end
   end
 end

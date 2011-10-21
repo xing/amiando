@@ -5,7 +5,9 @@ require "yajl"
 module Amiando
   autoload :Request,  'amiando/request'
   autoload :Resource, 'amiando/resource'
+  autoload :Boolean,  'amiando/boolean'
   autoload :ApiKey,   'amiando/api_key'
+  autoload :User,     'amiando/user'
 
   module Error
     class ServiceDown    < Exception; end
@@ -13,6 +15,8 @@ module Amiando
     class NotAuthorized  < Exception; end
     class NotFound       < Exception; end
     class NotImplemented < Exception; end
+    class NotInitialized < Exception; end
+    class MissingApiKey  < Exception; end
   end
 
   class << self
