@@ -32,6 +32,17 @@ module Amiando
       object
     end
 
+    ##
+    # Tries to log out the user_id. Will raise Error::NotAuthorized if
+    # trying to logout a user you don't have permission for. Will return
+    # a hash with "success" set to true or false.
+    def self.logout(user_id)
+      object = Boolean.new('success')
+      request = post object, "/api/user/#{user_id}/logout"
+
+      object
+    end
+
     def populate(response_body)
       extract_attributes_from(response_body, 'user')
     end
@@ -55,13 +66,6 @@ module Amiando
       post "api/user/#{user_id}/requestPermission", :password => password
     end
 
-    ##
-    # Tries to log out the user_id. Will raise Error::NotAuthorized if
-    # trying to logout a user you don't have permission for. Will return
-    # a hash with "success" set to true or false.
-    def logout(user_id)
-      post "api/user/#{user_id}/logout"
-    end
 
     def events(user_id)
       get "api/user/#{user_id}/events"

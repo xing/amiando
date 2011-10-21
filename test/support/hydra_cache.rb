@@ -47,7 +47,7 @@ module HydraCache
       Digest::SHA1.hexdigest(line)
     end.sort.join
 
-    params = request.params.map do |k,v|
+    params = Array(request.params).map do |k,v|
       Digest::SHA1.hexdigest("#{k},#{v}")
     end.sort.join
 

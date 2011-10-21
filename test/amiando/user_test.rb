@@ -39,4 +39,17 @@ describe Amiando::User do
       exists.result.must_equal true
     end
   end
+
+  describe 'logout' do
+    it 'logs out a user if exists' do
+      username = "jorgellop-logout-test-#{HydraCache.revision}@example.com"
+      user = Amiando::Factory(:user, :username => username)
+      Amiando.run
+
+      logout = Amiando::User.logout(user.id)
+      Amiando.run
+
+      logout.result.must_equal true
+    end
+  end
 end
