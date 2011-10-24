@@ -38,7 +38,7 @@ module Amiando
     # Creates a user. It will not return the full user and only the id
     # attribute will be available.
     #
-    # @params [Hash] attributes
+    # @param [Hash] attributes
     def self.create(attributes)
       object  = new
       request = post object, '/api/user/create',
@@ -116,6 +116,12 @@ module Amiando
       object
     end
 
+    def ==(user)
+      id == user.id
+    end
+
+    private
+
     def populate(response_body)
       extract_attributes_from(response_body, 'user')
     end
@@ -142,10 +148,6 @@ module Amiando
     # def events(user_id)
     #   get "api/user/#{user_id}/events"
     # end
-
-    def ==(user)
-      id == user.id
-    end
   end
 
 end

@@ -5,11 +5,11 @@ require "amiando/version"
 Gem::Specification.new do |s|
   s.name        = "amiando"
   s.version     = Amiando::VERSION
-  s.authors     = ["Albert Llop"]
-  s.email       = ["mrsimo@gmail.com"]
+  s.authors     = ["Jorge Dias", "Albert Llop"]
+  s.email       = ["jorge@mrdias.com","mrsimo@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{A ruby client for the amiando REST API}
+  s.description = %q{A ruby client for the amiando REST API with parallel requests in mind}
 
   s.rubyforge_project = "amiando"
 
