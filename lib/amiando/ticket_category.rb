@@ -47,5 +47,51 @@ module Amiando
       object
     end
 
+    ##
+    # Find a ticket category.
+    #
+    # @param ticket category id
+    #
+    # @return [TicketCategory]
+    def self.find(ticket_category_id)
+      object = new
+      get object, "api/ticketCategory/#{ticket_category_id}"
+
+      object
+    end
+
+    ##
+    # @param event id
+    # @param [Symbol]
+    #   :ids if you only want to fetch the ids.
+    #   :full if you want the whole objects
+    #
+    # @return [Result] with all the ticket category ids for this event.
+    def self.find_all_by_event_id(event_id, type = :ids)
+      object = Result.new do |response_body, result|
+        if response_body['success']
+          if type == :ids
+            response_body['ticketCategories']
+          else
+            response_body['ticketCategories'].map do |category|
+              new(category)
+            end
+          end
+        else
+          result.errors = response_body['errors']
+          false
+        end
+      end
+
+      get object, "/api/event/#{event_id}/ticketCategories", :params => {:resultType => type}
+
+      object
+    end
+
+    private
+
+    def populate(response_body)
+      extract_attributes_from(response_body, 'ticketCategory')
+    end
   end
 end

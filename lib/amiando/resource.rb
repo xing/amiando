@@ -96,6 +96,10 @@ module Amiando
       end
     end
 
+    def initialize(attributes = nil)
+      set_attributes(attributes)
+    end
+
     def [](key)
       @attributes[key.to_sym]
     end
@@ -123,17 +127,26 @@ module Amiando
 
     def extract_attributes_from(response_body, key)
       @attributes = {}
-      if response_body[key]
-        self.class.reverse_map_params(response_body[key]).each do |k,v|
-          @attributes[k.to_sym] = v
-        end
-      end
+
+      set_attributes(response_body[key])
 
       @success = response_body['success']
     end
 
     def ==(resource)
       id == resource.id
+    end
+
+    protected
+
+    def set_attributes(attributes)
+      @attributes = {}
+
+      if attributes
+        self.class.reverse_map_params(attributes).each do |k,v|
+          @attributes[k.to_sym] = v
+        end
+      end
     end
   end
 end

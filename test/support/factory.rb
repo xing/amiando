@@ -7,6 +7,7 @@ module Amiando
     extend self
 
     def build(name, options = {})
+      options = options.dup
       case name
       when :api_key
         Amiando::ApiKey.create({:name => 'wadus'}.merge(options))
@@ -25,8 +26,9 @@ module Amiando
           :selected_date => Time.at(0)
         }.merge(options))
       when :ticket_category
+        event = options.delete(:event) || Amiando::Factory.create(:event)
         Amiando::TicketCategory.create(
-          Amiando::Factory.create(:event).id, {
+          event.id, {
           :name      => "Name",
           :price     => "50",
           :available => "1"
