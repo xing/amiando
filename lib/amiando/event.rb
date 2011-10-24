@@ -114,10 +114,6 @@ module Amiando
       object
     end
 
-    ## pending
-    #
-    # *
-
     private
 
     def populate(response_body)
