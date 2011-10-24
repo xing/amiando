@@ -17,6 +17,13 @@ module Amiando
           :password   => '123456',
           :language   => 'es'
         }.merge(options))
+      when :event
+        Amiando::Event.create({
+          :host_id       => Amiando::TEST_USER.id,
+          :title         => 'Secret title',
+          :country       => 'es',
+          :selected_date => Time.at(0)
+        }.merge(options))
       end
     end
 

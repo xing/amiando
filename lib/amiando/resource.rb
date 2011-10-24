@@ -42,7 +42,7 @@ module Amiando
       private
 
       def do_request(object, verb, path, options = {})
-        req = Request.new(object, verb, path, options[:params])
+        req = Request.new(object, verb, path, options[:params] || {})
         object.request = req
 
         req.on_complete do |response|
@@ -111,7 +111,7 @@ module Amiando
       @attributes[:id]
     end
 
-    def populate
+    def populate(reponse_body)
       raise Error::NotImplemented.new("populate method not implemented for #{self.class}")
     end
 

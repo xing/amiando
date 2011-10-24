@@ -94,7 +94,7 @@ module Amiando
     end
 
     def populate(response_body)
-      extract_attributes_from(response_body, 'user')
+      extract_attributes_from(response_body, 'event')
     end
 
     def populate_create(response_body)
