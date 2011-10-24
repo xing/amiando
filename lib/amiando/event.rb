@@ -114,6 +114,14 @@ module Amiando
       object
     end
 
+    def self.find_all_by_user_id(user_id)
+      object = Result.new do |response_body|
+        response_body['events']
+      end
+      request = get object, "/api/user/#{user_id}/events"
+      object
+    end
+
     private
 
     def populate(response_body)

@@ -54,7 +54,7 @@ describe Amiando::Event do
 
   describe 'update' do
     it 'updates the event' do
-      event = Amiando::Factory.create(:event, :title => 'wadus', 
+      event = Amiando::Factory.create(:event, :title => 'wadus',
         :identifier => "event-identifier-update-#{HydraCache.revision}")
 
       Amiando::Event.update(event.id, :title => 'wadus 2')
@@ -64,6 +64,17 @@ describe Amiando::Event do
       Amiando.run
 
       event.title.must_equal 'wadus 2'
+    end
+  end
+
+  describe 'find_all_by_user_id' do
+    it 'fetches event ids for a user' do
+      event = Amiando::Factory.create(:event, :identifier => "event-identifier-find-all-#{HydraCache.revision}")
+
+      all = Amiando::Event.find_all_by_user_id(Amiando::TEST_USER.id)
+      Amiando.run
+
+      all.result.must_include event.id
     end
   end
 
