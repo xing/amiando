@@ -12,12 +12,12 @@ parallel using [Typhoeus](https://github.com/dbalatero/typhoeus).
 
 You can query multiple requests and run then like this:
 
-    ```ruby
-    albert = Amiando::User.find(1234)
-    jorge  = Amiando::User.find(5678)
+```ruby
+albert = Amiando::User.find(1234)
+jorge  = Amiando::User.find(5678)
 
-    Amiando.run
-    ```
+Amiando.run
+```
 
 Both requests will happen in parallel.
 
