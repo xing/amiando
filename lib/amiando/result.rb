@@ -8,14 +8,18 @@ module Amiando
   # After the object is populated, you can ask the result with the result
   # method.
   class Result
-    attr_accessor :request, :response
+    attr_accessor :request, :response, :errors
 
     def initialize(&block)
       @populator = block
     end
 
     def populate(response_body)
-      @result = @populator.call(response_body)
+      if @populator.arity == 1
+        @result = @populator.call(response_body)
+      elsif @populator.arity == 2
+        @result = @populator.call(response_body, self)
+      end
     end
 
     def result
@@ -27,4 +31,3 @@ module Amiando
     end
   end
 end
-

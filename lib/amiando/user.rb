@@ -19,15 +19,17 @@ module Amiando
     end
 
     ##
-    # Creates a user. It will not return the full user and only the id
-    # attribute will be available.
+    # Find a user given the username (email)
     #
     # @param [String] username
+    # @return [Result] with the user's id
     def self.find_by_username(username)
-      object = new
+      object = Result.new do |response_body|
+        response_body['ids'].first
+      end
+
       request = get object, "api/user/find",
-        :params => { :username => username },
-        :populate_method => :populate_find_by_username
+        :params => { :username => username }
 
       object
     end
@@ -74,6 +76,7 @@ module Amiando
     ##
     # Deletes a user
     # Returns a {Boolean} with the result of the operation
+    #
     # @param user_id
     def self.delete(user_id)
       object = Boolean.new('deleted')
@@ -82,10 +85,30 @@ module Amiando
       object
     end
 
+    ## Request permission to use and api key on behalf of a user
+    #
+    # @param user_id
+    # @param [String] password
+    def self.request_permission(user_id, password)
+      object = Result.new do |response_body, result|
+        if response_body['success']
+          true
+        else
+          result.errors = response_body['errors']
+          false
+        end
+      end
+
+      request = post object, "api/user/#{user_id}/requestPermission", :params => { :password => password }
+
+      object
+    end
+
     ##
     # Tries to log out the user_id. Will raise Error::NotAuthorized if
-    # trying to logout a user you don't have permission for. Will return
-    # a hash with "success" set to true or false.
+    # trying to logout a user you don't have permission for.
+    #
+    # @param user_id
     def self.logout(user_id)
       object = Boolean.new('success')
       request = post object, "/api/user/#{user_id}/logout"
@@ -94,16 +117,11 @@ module Amiando
     end
 
     def populate(response_body)
-      extract_attributes_from(response_body, 'event')
+      extract_attributes_from(response_body, 'user')
     end
 
     def populate_create(response_body)
       @attributes = {:id => response_body['id']}
-      @success    = response_body['success']
-    end
-
-    def populate_find_by_username(response_body)
-      @attributes = {:id => response_body['ids'].first}
       @success    = response_body['success']
     end
 

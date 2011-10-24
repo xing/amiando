@@ -21,7 +21,7 @@ describe Amiando::Resource do
 
   it 'raises an error if populate method is not implemented' do
     lambda {
-      Wadus.new.populate
+      Wadus.new.populate(nil)
     }.must_raise Amiando::Error::NotImplemented
   end
 

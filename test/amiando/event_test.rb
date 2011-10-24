@@ -19,8 +19,6 @@ describe Amiando::Event do
       event = Amiando::Event.find(original.id)
       Amiando.run
 
-      debugger
-
       event.id.must_equal original.id
       event.identifier.must_equal 'wadus'
     end

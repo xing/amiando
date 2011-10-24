@@ -12,4 +12,14 @@ describe Amiando::Result do
     result.populate(2)
     result.result.must_equal 4
   end
+
+  it "can access itself in the block" do
+    result = Amiando::Result.new do |something, res|
+      res.errors = ["hi"]
+      something * 2
+    end
+    result.populate(2)
+    result.result.must_equal 4
+    result.errors.must_equal ["hi"]
+  end
 end
