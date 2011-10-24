@@ -32,6 +32,22 @@ module Amiando
     end
 
     ##
+    # Updates an event.
+    #
+    # @return [Boolean] if it was successful or not.
+    def self.update(id, attributes)
+      object = Result.new do |response_body, result|
+        unless response_body['success']
+          result.errors = response_body['errors']
+        end
+        response_body['success']
+      end
+      request = post object, "/api/event/#{id}", :params => map_params(attributes)
+
+      object
+    end
+
+    ##
     # Fetch an event
     def self.find(id)
       object  = new
@@ -97,6 +113,12 @@ module Amiando
 
       object
     end
+
+    ## pending
+    #
+    # *
+
+    private
 
     def populate(response_body)
       extract_attributes_from(response_body, 'event')

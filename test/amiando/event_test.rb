@@ -52,6 +52,21 @@ describe Amiando::Event do
     end
   end
 
+  describe 'update' do
+    it 'updates the event' do
+      event = Amiando::Factory.create(:event, :title => 'wadus', 
+        :identifier => "event-identifier-update-#{HydraCache.revision}")
+
+      Amiando::Event.update(event.id, :title => 'wadus 2')
+      Amiando.run
+
+      event = Amiando::Event.find(event.id)
+      Amiando.run
+
+      event.title.must_equal 'wadus 2'
+    end
+  end
+
   describe 'activate' do
     it "returns errors if it can't be activated" do
       event  = Amiando::Factory.create(:event, :identifier => "event-identifier-activate-#{HydraCache.revision}")
