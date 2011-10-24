@@ -2,14 +2,14 @@ module Amiando
   class Request < Typhoeus::Request
     attr_reader :object
 
-    def initialize(object, verb, path, params = {})
+    def initialize(object, verb, path, params)
       @object = object
 
       if verb == :post
         path = build_url(path, default_params)
       else
         path = build_url(path)
-        params = default_params.merge(params)
+        params = default_params.merge(params || {})
       end
 
       super(path, :method => verb, :params => params, :verbose => 1)

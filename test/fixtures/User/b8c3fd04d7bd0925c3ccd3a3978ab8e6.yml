@@ -1,0 +1,49 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 0.213241
+body: |
+  <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+  <html><head>
+  <title>503 Service Temporarily Unavailable</title>
+  </head><body>
+  <h1>Service Temporarily Unavailable</h1>
+  <p>The server is temporarily unable to service your
+  request due to maintenance downtime or capacity
+  problems. Please try again later.</p>
+  </body></html>
+
+code: 503
+connect_time: 0.043052
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/user/2167804632?apikey=5Tgoob95gX5WqjF0FIjxoJHLNp7YEgAlLuXZdzMuYXaxZZaah3&format=json&version=1
+first_header_line: HTTP/1.1 503 Service Temporarily Unavailable
+headers: |
+  HTTP/1.1 503 Service Temporarily Unavailable
+  Date: Mon, 24 Oct 2011 10:40:33 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Content-Length: 323
+  Connection: close
+  Content-Type: text/html; charset=iso-8859-1
+  
+
+headers_hash: !map:Typhoeus::NormalizedHeaderHash 
+  Content-Type: text/html; charset=iso-8859-1
+  Date: Mon, 24 Oct 2011 10:40:33 GMT
+  Content-Length: "323"
+  Server: Apache/2.0.55 (Red Hat)
+  Connection: close
+http_version: 
+mock: false
+name_lookup_time: 0.002517
+pretransfer_time: 0.213246
+request: |-
+  :method => :get,
+  	:url => https://test.amiando.com/api/user/2167804632?apikey=5Tgoob95gX5WqjF0FIjxoJHLNp7YEgAlLuXZdzMuYXaxZZaah3&format=json&version=1,
+  	:params => {:apikey=>"5Tgoob95gX5WqjF0FIjxoJHLNp7YEgAlLuXZdzMuYXaxZZaah3", :format=>:json, :version=>1},
+  	:headers => {"User-Agent"=>"Typhoeus - http://github.com/dbalatero/typhoeus/tree/master"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.251209
+status_message: Service Temporarily Unavailable
+time: 0.251227
