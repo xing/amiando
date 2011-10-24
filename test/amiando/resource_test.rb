@@ -45,6 +45,7 @@ describe Amiando::Resource do
   it 'reverse maps attributes appropriately' do
     expected = {:first_name => '1', :last_name => '2', :wadus => '3'}
     Wadus.reverse_map_params(:firstName => '1', :lastName => '2', :wadus => '3').must_equal expected
+    Wadus.reverse_map_params('firstName' => '1', 'lastName' => '2', 'wadus' => '3').must_equal expected
   end
 
   it 'maps attributes with typecasting' do

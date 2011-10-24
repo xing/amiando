@@ -1,0 +1,62 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 0.29541
+body: "{\"errors\":[\"com.amiando.api.rest.InvalidResourceId\"],\"success\":false}"
+code: 400
+connect_time: 0.143496
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/event/ticketShop?apikey=5Tgoob95gX5WqjF0FIjxoJHLNp7YEgAlLuXZdzMuYXaxZZaah3&format=json&version=1
+first_header_line: HTTP/1.1 400 Bad Request
+headers: |
+  HTTP/1.1 400 Bad Request
+  Date: Mon, 24 Oct 2011 14:56:49 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=1D63E0D86ABC14C107D77BF869CCE2B5.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=1D63E0D86ABC14C107D77BF869CCE2B5.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=NkpzUm1vOUZlZVo1aGlBeDoxMzIwNjc3OTk1Nzg2OjcwZWYzYzE0NmFkNGY3ODZiZTgyZTk5MGUzZjExNTRj; Expires=Sat, 22-Oct-2016 14:59:55 GMT; Path=/
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Mon, 24 Oct 2011 16:56:49 GMT
+  Connection: close
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::NormalizedHeaderHash 
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Transfer-Encoding: chunked
+  Access-Control-Allow-Origin: "*"
+  Content-Type: application/json;charset=UTF-8
+  Date: Mon, 24 Oct 2011 14:56:49 GMT
+  Accept-Ranges: bytes
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: 
+  - JSESSIONID=1D63E0D86ABC14C107D77BF869CCE2B5.web01; Path=/; Secure
+  - JSESSIONID=1D63E0D86ABC14C107D77BF869CCE2B5.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=NkpzUm1vOUZlZVo1aGlBeDoxMzIwNjc3OTk1Nzg2OjcwZWYzYzE0NmFkNGY3ODZiZTgyZTk5MGUzZjExNTRj; Expires=Sat, 22-Oct-2016 14:59:55 GMT; Path=/
+  Expires: Mon, 24 Oct 2011 16:56:49 GMT
+  Cache-Control: max-age=7200
+  Accept-Charset: utf-8
+  Connection: close
+http_version: 
+mock: false
+name_lookup_time: 2.6e-05
+pretransfer_time: 0.295412
+request: |-
+  :method => :get,
+  	:url => https://test.amiando.com/api/event/ticketShop?apikey=5Tgoob95gX5WqjF0FIjxoJHLNp7YEgAlLuXZdzMuYXaxZZaah3&format=json&version=1,
+  	:params => {:version=>1, :format=>:json, :apikey=>"5Tgoob95gX5WqjF0FIjxoJHLNp7YEgAlLuXZdzMuYXaxZZaah3"},
+  	:headers => {"User-Agent"=>"Typhoeus - http://github.com/dbalatero/typhoeus/tree/master"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.60924
+status_message: Bad Request
+time: 0.609343

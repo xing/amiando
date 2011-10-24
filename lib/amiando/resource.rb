@@ -1,7 +1,7 @@
 module Amiando
   class Resource
     attr_accessor :request, :response
-    attr_reader :success
+    attr_reader :success, :attributes
 
     class << self
       def map(local, remote, options = {})
@@ -32,8 +32,9 @@ module Amiando
       def reverse_map_params(attributes)
         inverted_mapping = mapping.invert
         mapped_attributes = attributes.map do |key,value|
+          key        = key.to_sym
           mapped_key = inverted_mapping[key] || key
-          value = inverse_typecast(key, value)
+          value      = inverse_typecast(key, value)
           [mapped_key, value]
         end
         Hash[mapped_attributes]

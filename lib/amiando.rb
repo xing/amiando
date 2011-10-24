@@ -11,6 +11,7 @@ module Amiando
   autoload :User,           'amiando/user'
   autoload :Event,          'amiando/event'
   autoload :TicketCategory, 'amiando/ticket_category'
+  autoload :TicketShop,     'amiando/ticket_shop'
 
   module Error
     class ServiceDown    < Exception; end
