@@ -126,11 +126,6 @@ module Amiando
       extract_attributes_from(response_body, 'user')
     end
 
-    def populate_create(response_body)
-      @attributes = {:id => response_body['id']}
-      @success    = response_body['success']
-    end
-
     # def bank_account(id)
     #   request :get, "api/user/#{id}/bankAccount"
     # end

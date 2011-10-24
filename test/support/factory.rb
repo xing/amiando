@@ -6,7 +6,7 @@ module Amiando
   module Factory
     extend self
 
-    def build(name, options)
+    def build(name, options = {})
       case name
       when :api_key
         Amiando::ApiKey.create({:name => 'wadus'}.merge(options))
@@ -24,10 +24,17 @@ module Amiando
           :country       => 'es',
           :selected_date => Time.at(0)
         }.merge(options))
+      when :ticket_category
+        Amiando::TicketCategory.create(
+          Amiando::Factory.create(:event).id, {
+          :name      => "Name",
+          :price     => "50",
+          :available => "1"
+        }.merge(options))
       end
     end
 
-    def create(name, options)
+    def create(name, options = {})
       object = build(name, options)
       Amiando.run
       object

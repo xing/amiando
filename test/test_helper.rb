@@ -25,8 +25,7 @@ module Amiando
               end
   TEST_USER = begin
                 Amiando.api_key = TEST_KEY
-                user = Amiando::Factory(:user, :username => "jorgellop-base-#{HydraCache.revision}@example.com")
-                Amiando.run
+                user = Amiando::Factory.create(:user, :username => "jorgellop-base-#{HydraCache.revision}@example.com")
                 Amiando.api_key = nil
                 user
               end

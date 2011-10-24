@@ -1,0 +1,62 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 0.405852
+body: "{\"errors\":[\"com.amiando.api.rest.MissingParam.name\"],\"success\":false}"
+code: 400
+connect_time: 0.107465
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/event/349022/ticketCategory/create?format=json&version=1&apikey=5Tgoob95gX5WqjF0FIjxoJHLNp7YEgAlLuXZdzMuYXaxZZaah3
+first_header_line: HTTP/1.1 400 Bad Request
+headers: |
+  HTTP/1.1 400 Bad Request
+  Date: Mon, 24 Oct 2011 14:42:36 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=45CC85B945239909A559ED7AE2E52C79.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=45CC85B945239909A559ED7AE2E52C79.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=cUdOSDZqdEo0UmhvTUoyZToxMzIwNjc3MTQyNzc5OmZmNDEzMDI2YzBiNTEzZTE2OTQxNzgwYjM4YzJjNDk3; Expires=Sat, 22-Oct-2016 14:45:42 GMT; Path=/
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Mon, 24 Oct 2011 16:42:36 GMT
+  Vary: User-Agent
+  Connection: close
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::NormalizedHeaderHash 
+  Vary: User-Agent
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Transfer-Encoding: chunked
+  Access-Control-Allow-Origin: "*"
+  Content-Type: application/json;charset=UTF-8
+  Date: Mon, 24 Oct 2011 14:42:36 GMT
+  Accept-Ranges: bytes
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: 
+  - JSESSIONID=45CC85B945239909A559ED7AE2E52C79.web01; Path=/; Secure
+  - JSESSIONID=45CC85B945239909A559ED7AE2E52C79.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=cUdOSDZqdEo0UmhvTUoyZToxMzIwNjc3MTQyNzc5OmZmNDEzMDI2YzBiNTEzZTE2OTQxNzgwYjM4YzJjNDk3; Expires=Sat, 22-Oct-2016 14:45:42 GMT; Path=/
+  Expires: Mon, 24 Oct 2011 16:42:36 GMT
+  Cache-Control: max-age=7200
+  Accept-Charset: utf-8
+  Connection: close
+http_version: 
+mock: false
+name_lookup_time: 0.04522
+pretransfer_time: 0.405856
+request: |-
+  :method => :post,
+  	:url => https://test.amiando.com/api/event/349022/ticketCategory/create?format=json&version=1&apikey=5Tgoob95gX5WqjF0FIjxoJHLNp7YEgAlLuXZdzMuYXaxZZaah3,
+  	:params => {:available=>"1", :name=>"", :price=>"50"},
+  	:headers => {"User-Agent"=>"Typhoeus - http://github.com/dbalatero/typhoeus/tree/master"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.559522
+status_message: Bad Request
+time: 0.559557

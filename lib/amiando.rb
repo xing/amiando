@@ -3,13 +3,14 @@ require "typhoeus"
 require "yajl"
 
 module Amiando
-  autoload :Request,  'amiando/request'
-  autoload :Resource, 'amiando/resource'
-  autoload :Boolean,  'amiando/boolean'
-  autoload :Result,   'amiando/result'
-  autoload :ApiKey,   'amiando/api_key'
-  autoload :User,     'amiando/user'
-  autoload :Event,    'amiando/event'
+  autoload :Request,        'amiando/request'
+  autoload :Resource,       'amiando/resource'
+  autoload :Boolean,        'amiando/boolean'
+  autoload :Result,         'amiando/result'
+  autoload :ApiKey,         'amiando/api_key'
+  autoload :User,           'amiando/user'
+  autoload :Event,          'amiando/event'
+  autoload :TicketCategory, 'amiando/ticket_category'
 
   module Error
     class ServiceDown    < Exception; end

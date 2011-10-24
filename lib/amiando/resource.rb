@@ -115,6 +115,11 @@ module Amiando
       raise Error::NotImplemented.new("populate method not implemented for #{self.class}")
     end
 
+    def populate_create(response_body)
+      @attributes = {:id => response_body['id'], :errors => response_body['errors']}
+      @success    = response_body['success']
+    end
+
     def extract_attributes_from(response_body, key)
       @attributes = {}
       if response_body[key]
@@ -124,6 +129,10 @@ module Amiando
       end
 
       @success = response_body['success']
+    end
+
+    def ==(resource)
+      id == resource.id
     end
   end
 end

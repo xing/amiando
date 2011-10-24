@@ -127,10 +127,5 @@ module Amiando
     def populate(response_body)
       extract_attributes_from(response_body, 'event')
     end
-
-    def populate_create(response_body)
-      @attributes = {:id => response_body['id']}
-      @success    = response_body['success']
-    end
   end
 end
