@@ -70,7 +70,10 @@ module Amiando
     #
     # @return [Result] if it was activated or not.
     def self.activate(id)
-      object = Result.new do |response_body|
+      object = Result.new do |response_body, result|
+        unless response_body['success']
+          result.errors = response_body['errors']
+        end
         response_body['success']
       end
       request = post object, "/api/event/#{id}/activate"
