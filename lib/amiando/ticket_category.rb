@@ -1,4 +1,6 @@
 module Amiando
+
+  ##
   # http://developers.amiando.com/index.php/REST_API_TicketCategories
   class TicketCategory < Resource
     map :sale_start,         :saleStart, :type => :time
