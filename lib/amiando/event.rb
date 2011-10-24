@@ -46,7 +46,7 @@ module Amiando
     # @param [Hash] a hash with 1 entry, either :identifier or :title
     #
     # @return [Result] with an array of ids
-    def self.search(by = {})
+    def self.search(by)
       unless by[:identifier].nil? ^ by[:title].nil? # XOR
         raise ArgumentError.new('Events can be searched either by identifier or by title, include only one.')
       end
