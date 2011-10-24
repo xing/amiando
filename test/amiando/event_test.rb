@@ -24,6 +24,18 @@ describe Amiando::Event do
     end
   end
 
+  describe 'exists' do
+    it 'checks if an event an already exists' do
+      original = Amiando::Factory(:event, :identifier => 'wadus')
+      Amiando.run
+
+      exists = Amiando::Event.exists?('wadus')
+      Amiando.run
+
+      exists.result.must_equal true
+    end
+  end
+
   describe 'create' do
     it 'creates an event wit valid parameters passed' do
       event = Amiando::Event.create(

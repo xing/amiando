@@ -41,6 +41,16 @@ module Amiando
     end
 
     ##
+    # See if an event id exists
+    def self.exists?(identifier)
+      object  = Boolean.new('exists')
+      request = get object, "api/event/exists",
+        :params => { :identifier => identifier }
+
+      object
+    end
+
+    ##
     # Search by identifier or title.
     #
     # @param [Hash] a hash with 1 entry, either :identifier or :title
