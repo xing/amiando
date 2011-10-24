@@ -4,12 +4,17 @@ module Amiando
     attr_reader :success
 
     class << self
-      def mapping
-        @@mapping ||= {}
+      def map(local, remote, options = {})
+        mapping[local] = remote
+        typecasting[local] = options[:type] if options[:type]
       end
 
-      def mapping=(value)
-        @@mapping = value
+      def typecasting
+        @@typecasting ||= {}
+      end
+
+      def mapping
+        @@mapping ||= {}
       end
 
       ##
@@ -18,6 +23,7 @@ module Amiando
       def map_params(attributes)
         mapped_attributes = attributes.map do |key,value|
           mapped_key = mapping[key] || key
+          value = typecast(key, value)
           [mapped_key, value]
         end
         Hash[mapped_attributes]
@@ -27,6 +33,7 @@ module Amiando
         inverted_mapping = mapping.invert
         mapped_attributes = attributes.map do |key,value|
           mapped_key = inverted_mapping[key] || key
+          value = inverse_typecast(key, value)
           [mapped_key, value]
         end
         Hash[mapped_attributes]
@@ -69,6 +76,22 @@ module Amiando
 
       def post(object, path, options = {})
         do_request(object, :post, path, options)
+      end
+
+      def typecast(key, value)
+        if typecasting[key] == :time || value.is_a?(Time)
+          value.iso8601
+        else
+          value
+        end
+      end
+
+      def inverse_typecast(key, value)
+        if typecasting[key] == :time
+          Time.parse(value)
+        else
+          value
+        end
       end
     end
 

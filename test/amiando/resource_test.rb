@@ -2,10 +2,9 @@ require 'test_helper'
 
 describe Amiando::Resource do
   class Wadus < Amiando::Resource
-    self.mapping = {
-      :first_name => :firstName,
-      :last_name  => :lastName
-    }
+    map :first_name, :firstName
+    map :last_name , :lastName
+    map :creation, :creation, :type => :time
 
     def self.create
       post new, 'somewhere'
@@ -46,5 +45,23 @@ describe Amiando::Resource do
   it 'reverse maps attributes appropriately' do
     expected = {:first_name => '1', :last_name => '2', :wadus => '3'}
     Wadus.reverse_map_params(:firstName => '1', :lastName => '2', :wadus => '3').must_equal expected
+  end
+
+  it 'maps attributes with typecasting' do
+    time      = Time.at(0)
+    expected  = { :creation => '1970-01-01T01:00:00+01:00' }
+    Wadus.map_params(:creation => time).must_equal expected
+  end
+
+  it 'automatically typecasts if the object is a Time' do
+    time      = Time.at(0)
+    expected  = { :firstName => '1970-01-01T01:00:00+01:00' }
+    Wadus.map_params(:first_name => time).must_equal expected
+  end
+
+  it 'reverse maps attributes with typecasting' do
+    time      = Time.at(0)
+    expected  = { :creation => time }
+    Wadus.reverse_map_params(:creation => '1970-01-01T01:00:00+01:00').must_equal expected
   end
 end
