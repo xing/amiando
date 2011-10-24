@@ -51,6 +51,34 @@ module Amiando
     end
 
     ##
+    # Deletes an event
+    #
+    # @param [Integer] event id
+    #
+    # @return [Boolean] with the result of the operation
+    def self.delete(id)
+      object = Boolean.new('deleted')
+      request = do_request object, :delete, "/api/event/#{id}"
+
+      object
+    end
+
+    ##
+    # Activate an event
+    #
+    # @param [Integer] the event id
+    #
+    # @return [Result] if it was activated or not.
+    def self.activate(id)
+      object = Result.new do |response_body|
+        response_body['success']
+      end
+      request = post object, "/api/event/#{id}/activate"
+
+      object
+    end
+
+    ##
     # Search by identifier or title.
     #
     # @param [Hash] a hash with 1 entry, either :identifier or :title

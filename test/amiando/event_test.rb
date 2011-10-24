@@ -52,6 +52,40 @@ describe Amiando::Event do
     end
   end
 
+  describe 'activate' do
+    it "returns errors if it can't be activated" do
+      event  = Amiando::Factory.create(:event, :identifier => "event-identifier-activate-#{HydraCache.revision}")
+
+      activated = Amiando::Event.activate(event.id)
+      Amiando.run
+
+      activated.result.must_equal false
+      activated.errors.wont_be_empty
+    end
+
+    ##
+    # To be implemented when we can do everything necessary to activate an event
+    # (create ticket categories, etc).
+    # it 'activates the event' do
+    # end
+  end
+
+  describe 'delete' do
+    it 'deletes the event' do
+      event = Amiando::Factory.create(:event, :identifier => "event-identifier-#{HydraCache.revision}")
+
+      deleted = Amiando::Event.delete(event.id)
+      Amiando.run
+
+      deleted.result.must_equal true
+
+      exists = Amiando::Event.exists?(event.id)
+      Amiando.run
+
+      exists.result.must_equal false
+    end
+  end
+
   describe 'search' do
     it 'finds events by identifier' do
       event = Amiando::Factory(:event, :identifier => 'waduswadus1234')

@@ -111,7 +111,7 @@ module Amiando
       @attributes[:id]
     end
 
-    def populate(reponse_body)
+    def populate(reponse_body = {})
       raise Error::NotImplemented.new("populate method not implemented for #{self.class}")
     end
 
