@@ -1,0 +1,62 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 0.235204
+body: "{\"errors\":[\"com.amiando.api.rest.InvalidResourceId\"],\"success\":false}"
+code: 400
+connect_time: 0.096349
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/paymentType/false?apikey=5Tgoob95gX5WqjF0FIjxoJHLNp7YEgAlLuXZdzMuYXaxZZaah3&format=json&version=1
+first_header_line: HTTP/1.1 400 Bad Request
+headers: |
+  HTTP/1.1 400 Bad Request
+  Date: Tue, 25 Oct 2011 10:47:21 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=5898C665565943F2640F7650E9E0DEBC.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=5898C665565943F2640F7650E9E0DEBC.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=czFKQ0hpY1lLQTZHNDVaZjoxMzIwNzQ5NDMwNTc1OjM2YTMxYTViYjU5ZThhNWJkMGMzZDRmZTEwYzZkMTA4; Expires=Sun, 23-Oct-2016 10:50:30 GMT; Path=/
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Tue, 25 Oct 2011 12:47:21 GMT
+  Connection: close
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::NormalizedHeaderHash 
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Transfer-Encoding: chunked
+  Access-Control-Allow-Origin: "*"
+  Content-Type: application/json;charset=UTF-8
+  Date: Tue, 25 Oct 2011 10:47:21 GMT
+  Accept-Ranges: bytes
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: 
+  - JSESSIONID=5898C665565943F2640F7650E9E0DEBC.web01; Path=/; Secure
+  - JSESSIONID=5898C665565943F2640F7650E9E0DEBC.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=czFKQ0hpY1lLQTZHNDVaZjoxMzIwNzQ5NDMwNTc1OjM2YTMxYTViYjU5ZThhNWJkMGMzZDRmZTEwYzZkMTA4; Expires=Sun, 23-Oct-2016 10:50:30 GMT; Path=/
+  Expires: Tue, 25 Oct 2011 12:47:21 GMT
+  Cache-Control: max-age=7200
+  Accept-Charset: utf-8
+  Connection: close
+http_version: 
+mock: false
+name_lookup_time: 1.9e-05
+pretransfer_time: 0.235208
+request: |-
+  :method => :get,
+  	:url => https://test.amiando.com/api/paymentType/false?apikey=5Tgoob95gX5WqjF0FIjxoJHLNp7YEgAlLuXZdzMuYXaxZZaah3&format=json&version=1,
+  	:params => {:apikey=>"5Tgoob95gX5WqjF0FIjxoJHLNp7YEgAlLuXZdzMuYXaxZZaah3", :format=>:json, :version=>1},
+  	:headers => {"User-Agent"=>"Typhoeus - http://github.com/dbalatero/typhoeus/tree/master"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.480779
+status_message: Bad Request
+time: 0.480849
