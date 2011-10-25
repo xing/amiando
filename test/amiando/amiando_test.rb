@@ -10,4 +10,15 @@ describe Amiando do
     Amiando.base_url.must_equal 'https://amiando.com'
     Amiando.development!
   end
+
+  describe 'logger' do
+    it 'should define a logger' do
+      log = StringIO.new
+      Amiando.logger = Logger.new(log)
+      Amiando.logger.debug 'hi'
+
+      log.string.must_match(/hi/)
+      Amiando.logger = nil
+    end
+  end
 end

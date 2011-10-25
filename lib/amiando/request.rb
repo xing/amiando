@@ -12,7 +12,19 @@ module Amiando
         params = default_params.merge(params || {})
       end
 
-      super(path, :method => verb, :params => params, :verbose => 1)
+      super(path, :method => verb, :params => params, :verbose => Amiando.verbose)
+    end
+
+    def log_response
+      if Amiando.logger
+        filtered_url = url.gsub(/password=([^&]+)/, "password=[FILTERED]")
+        Amiando.logger.info "REST request #{filtered_url} returned #{response.code} and took #{response.time} seconds"
+
+        if Amiando.logger.debug? && response.body
+          filtered_body = response.body.inspect.gsub(/password: .*/,'password: [FILTERED]')
+          Amiando.logger.debug "REST request body: #{filtered_body}"
+        end
+      end
     end
 
     private

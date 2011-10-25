@@ -26,6 +26,8 @@ module Amiando
 
   class << self
     attr_accessor :api_key
+    attr_accessor :logger
+    attr_accessor :verbose
 
     URL       = 'https://amiando.com'
     TEST_URL  = 'https://test.amiando.com'

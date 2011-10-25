@@ -22,6 +22,7 @@ Amiando.hydra.cache_getter &HydraCache.method(:getter)
 HydraCache.revision = 2
 
 WebMock.allow_net_connect!
+Amiando.verbose = true
 
 HydraCache.prefix = 'Global'
 

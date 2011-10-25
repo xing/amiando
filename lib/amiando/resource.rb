@@ -57,6 +57,7 @@ module Amiando
         object.request = req
 
         req.on_complete do |response|
+          req.log_response
 
           # Raise different errors depending on the return codes
           case response.code
