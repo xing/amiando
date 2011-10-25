@@ -55,5 +55,13 @@ module Amiando
     def hydra
       @hydra ||= Typhoeus::Hydra.new
     end
+
+    def with_key(key)
+      old_key = Amiando.api_key
+      Amiando.api_key = key
+      yield
+    ensure
+      Amiando.api_key = old_key
+    end
   end
 end

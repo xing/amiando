@@ -20,17 +20,11 @@ WebMock.allow_net_connect!
 HydraCache.prefix = 'Global'
 
 module Amiando
-  TEST_KEY =  begin
-                key = Amiando::Factory(:api_key, :name => 'test key')
-                Amiando.run
-                key.key
-              end
-  TEST_USER = begin
-                Amiando.api_key = TEST_KEY
-                user = Amiando::Factory.create(:user, :username => "jorgellop-base-#{HydraCache.revision}@example.com")
-                Amiando.api_key = nil
-                user
-              end
+  TEST_KEY = Amiando::Factory.create(:api_key, :name => 'test key').key
+
+  TEST_USER = Amiando.with_key(TEST_KEY) do
+    Amiando::Factory.create(:user, :username => "jorgellop-base-#{HydraCache.revision}@example.com")
+  end
 end
 
 HydraCache.prefix = nil
