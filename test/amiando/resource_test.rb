@@ -8,12 +8,14 @@ describe Amiando::Resource do
 
     def self.create
       object = new
-      post new, 'somewhere'
+      post object, 'somewhere', :populate_method => :populate_create
       object
     end
 
-    def populate(response_body)
+    def populate_create(response_body)
+      @success = response_body['success']
     end
+
   end
 
   it 'raises error when amiando is down' do
@@ -73,8 +75,8 @@ describe Amiando::Resource do
 
   describe 'synchronous calls' do
     it 'accepts synchronous calls' do
-      stub_request(:post, /somewhere/).to_return(:status => 200, :body => '"success":true' })
-      Wadus.sync_create.success.must_be true
+      stub_request(:post, /somewhere/).to_return(:status => 200, :body => '{"success":true}')
+      Wadus.sync_create.success.must_equal true
     end
   end
 end
