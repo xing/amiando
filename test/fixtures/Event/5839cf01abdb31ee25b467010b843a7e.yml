@@ -1,0 +1,60 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 0.968721
+body: "{\"exists\":true,\"success\":true}"
+code: 200
+connect_time: 0.552767
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/event/exists?apikey=EHynu2WfcVkkO3VRce0ZWtWKplIpXjlhCuQuDn7s1MgKF9ztR0&format=json&identifier=event-exists-2&version=1
+first_header_line: HTTP/1.1 200 OK
+headers: |
+  HTTP/1.1 200 OK
+  Date: Tue, 25 Oct 2011 14:58:04 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=93355B6735835C104B18E9A6C8EC7A05.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=93355B6735835C104B18E9A6C8EC7A05.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=U2hxQzc4R205eHhvQzhmVDoxMzIwNzY0NDczNDI3OjE0Yzc1MmYyYjBiZmMzMDk4NzU5ZGM2MjdhMzI1ODIw; Expires=Sun, 23-Oct-2016 15:01:13 GMT; Path=/
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Tue, 25 Oct 2011 16:58:04 GMT
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::NormalizedHeaderHash 
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Transfer-Encoding: chunked
+  Access-Control-Allow-Origin: "*"
+  Content-Type: application/json;charset=UTF-8
+  Date: Tue, 25 Oct 2011 14:58:04 GMT
+  Accept-Ranges: bytes
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: 
+  - JSESSIONID=93355B6735835C104B18E9A6C8EC7A05.web01; Path=/; Secure
+  - JSESSIONID=93355B6735835C104B18E9A6C8EC7A05.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=U2hxQzc4R205eHhvQzhmVDoxMzIwNzY0NDczNDI3OjE0Yzc1MmYyYjBiZmMzMDk4NzU5ZGM2MjdhMzI1ODIw; Expires=Sun, 23-Oct-2016 15:01:13 GMT; Path=/
+  Expires: Tue, 25 Oct 2011 16:58:04 GMT
+  Cache-Control: max-age=7200
+  Accept-Charset: utf-8
+http_version: 
+mock: false
+name_lookup_time: 0.418793
+pretransfer_time: 0.968723
+request: |-
+  :method => :get,
+  	:url => https://test.amiando.com/api/event/exists?apikey=EHynu2WfcVkkO3VRce0ZWtWKplIpXjlhCuQuDn7s1MgKF9ztR0&format=json&identifier=event-exists-2&version=1,
+  	:params => {:version=>1, :format=>:json, :apikey=>"EHynu2WfcVkkO3VRce0ZWtWKplIpXjlhCuQuDn7s1MgKF9ztR0", :identifier=>"event-exists-2"},
+  	:headers => {"User-Agent"=>"Typhoeus - http://github.com/dbalatero/typhoeus/tree/master"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 1.097239
+status_message: OK
+time: 1.097294

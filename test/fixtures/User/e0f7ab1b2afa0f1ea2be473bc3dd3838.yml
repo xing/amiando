@@ -1,0 +1,60 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 5.3e-05
+body: "{\"authorized\":true,\"exists\":true,\"success\":true}"
+code: 200
+connect_time: 5.3e-05
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/user/exists?apikey=EHynu2WfcVkkO3VRce0ZWtWKplIpXjlhCuQuDn7s1MgKF9ztR0&format=json&username=jorgellop-exists-2%40example.com&version=1
+first_header_line: HTTP/1.1 200 OK
+headers: |
+  HTTP/1.1 200 OK
+  Date: Tue, 25 Oct 2011 14:53:00 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=CAEECBCC9838ECD96FF6CA62A7EBE3EC.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=CAEECBCC9838ECD96FF6CA62A7EBE3EC.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=Ynd3MUE3V2tjbGZnUm1weDoxMzIwNzY0MTY5ODcxOmEyNmQ4MDA1YjUwYTQ2NGM3ZGVlZGEwN2QyN2YwYThl; Expires=Sun, 23-Oct-2016 14:56:09 GMT; Path=/
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Tue, 25 Oct 2011 16:53:00 GMT
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::NormalizedHeaderHash 
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Transfer-Encoding: chunked
+  Access-Control-Allow-Origin: "*"
+  Content-Type: application/json;charset=UTF-8
+  Date: Tue, 25 Oct 2011 14:53:00 GMT
+  Accept-Ranges: bytes
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: 
+  - JSESSIONID=CAEECBCC9838ECD96FF6CA62A7EBE3EC.web01; Path=/; Secure
+  - JSESSIONID=CAEECBCC9838ECD96FF6CA62A7EBE3EC.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=Ynd3MUE3V2tjbGZnUm1weDoxMzIwNzY0MTY5ODcxOmEyNmQ4MDA1YjUwYTQ2NGM3ZGVlZGEwN2QyN2YwYThl; Expires=Sun, 23-Oct-2016 14:56:09 GMT; Path=/
+  Expires: Tue, 25 Oct 2011 16:53:00 GMT
+  Cache-Control: max-age=7200
+  Accept-Charset: utf-8
+http_version: 
+mock: false
+name_lookup_time: 5.2e-05
+pretransfer_time: 6.0e-05
+request: |-
+  :method => :get,
+  	:url => https://test.amiando.com/api/user/exists?apikey=EHynu2WfcVkkO3VRce0ZWtWKplIpXjlhCuQuDn7s1MgKF9ztR0&format=json&username=jorgellop-exists-2%40example.com&version=1,
+  	:params => {:version=>1, :username=>"jorgellop-exists-2@example.com", :format=>:json, :apikey=>"EHynu2WfcVkkO3VRce0ZWtWKplIpXjlhCuQuDn7s1MgKF9ztR0"},
+  	:headers => {"User-Agent"=>"Typhoeus - http://github.com/dbalatero/typhoeus/tree/master"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.128061
+status_message: OK
+time: 0.128107
