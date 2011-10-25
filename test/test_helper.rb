@@ -3,10 +3,16 @@ require 'minitest/autorun'
 require 'minitest/spec'
 require 'webmock/minitest'
 require 'amiando'
+
 begin
   require 'ruby-debug'
-rescue LoadError
-end
+rescue LoadError; end
+
+begin
+  require 'minitest/reporters'
+  MiniTest::Unit.runner = MiniTest::SuiteRunner.new
+  MiniTest::Unit.runner.reporters << MiniTest::Reporters::SpecReporter.new
+rescue LoadError; end
 
 require 'support/hydra_cache'
 require 'support/factory'
