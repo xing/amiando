@@ -23,7 +23,7 @@ module Amiando
           :host_id       => Amiando::TEST_USER.id,
           :title         => 'Secret title',
           :country       => 'es',
-          :selected_date => Time.at(0)
+          :selected_date => Time.at(0).utc
         }.merge(options))
       when :ticket_category
         event = options.delete(:event) || Amiando::Factory.create(:event)

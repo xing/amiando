@@ -1,0 +1,60 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 6.2e-05
+body: "{\"results\":{\"availablePaymentTypes\":[\"PAYMENT_TYPE_PREPAYMENT\",\"PAYMENT_TYPE_PP\",\"PAYMENT_TYPE_INVOICE\",\"PAYMENT_TYPE_CC\",\"PAYMENT_TYPE_ONLOCATION\"],\"paymentTypes\":[{\"id\":867997,\"active\":true,\"type\":\"PAYMENT_TYPE_INVOICE\"},{\"id\":867996,\"active\":true,\"type\":\"PAYMENT_TYPE_PP\"},{\"id\":867995,\"active\":true,\"type\":\"PAYMENT_TYPE_CC\"},{\"id\":867994,\"active\":true,\"type\":\"PAYMENT_TYPE_PREPAYMENT\"}]},\"success\":true}"
+code: 200
+connect_time: 6.2e-05
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/event/349093/paymentTypes?apikey=EHynu2WfcVkkO3VRce0ZWtWKplIpXjlhCuQuDn7s1MgKF9ztR0&format=json&version=1
+first_header_line: HTTP/1.1 200 OK
+headers: |
+  HTTP/1.1 200 OK
+  Date: Tue, 25 Oct 2011 14:52:52 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=A6D953316C5CE19FD41E8EE16513C779.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=A6D953316C5CE19FD41E8EE16513C779.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=SGJkbXpDRFMwVmFpNUFqUToxMzIwNzY0MTYyMDY0OjgyNDRjMjM2OGIxMTg1ZGUyYjY4M2VmYTQ1Yjk3ZmFk; Expires=Sun, 23-Oct-2016 14:56:02 GMT; Path=/
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Tue, 25 Oct 2011 16:52:52 GMT
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::NormalizedHeaderHash 
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Transfer-Encoding: chunked
+  Access-Control-Allow-Origin: "*"
+  Content-Type: application/json;charset=UTF-8
+  Date: Tue, 25 Oct 2011 14:52:52 GMT
+  Accept-Ranges: bytes
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: 
+  - JSESSIONID=A6D953316C5CE19FD41E8EE16513C779.web01; Path=/; Secure
+  - JSESSIONID=A6D953316C5CE19FD41E8EE16513C779.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=SGJkbXpDRFMwVmFpNUFqUToxMzIwNzY0MTYyMDY0OjgyNDRjMjM2OGIxMTg1ZGUyYjY4M2VmYTQ1Yjk3ZmFk; Expires=Sun, 23-Oct-2016 14:56:02 GMT; Path=/
+  Expires: Tue, 25 Oct 2011 16:52:52 GMT
+  Cache-Control: max-age=7200
+  Accept-Charset: utf-8
+http_version: 
+mock: false
+name_lookup_time: 6.1e-05
+pretransfer_time: 6.9e-05
+request: |-
+  :method => :get,
+  	:url => https://test.amiando.com/api/event/349093/paymentTypes?apikey=EHynu2WfcVkkO3VRce0ZWtWKplIpXjlhCuQuDn7s1MgKF9ztR0&format=json&version=1,
+  	:params => {:version=>1, :format=>:json, :apikey=>"EHynu2WfcVkkO3VRce0ZWtWKplIpXjlhCuQuDn7s1MgKF9ztR0"},
+  	:headers => {"User-Agent"=>"Typhoeus - http://github.com/dbalatero/typhoeus/tree/master"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.144415
+status_message: OK
+time: 0.201861

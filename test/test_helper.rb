@@ -13,7 +13,7 @@ require 'support/factory'
 
 Amiando.hydra.cache_setter &HydraCache.method(:setter)
 Amiando.hydra.cache_getter &HydraCache.method(:getter)
-HydraCache.revision = 1
+HydraCache.revision = 2
 
 WebMock.allow_net_connect!
 
