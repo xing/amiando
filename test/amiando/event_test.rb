@@ -35,12 +35,12 @@ describe Amiando::Event do
   end
 
   describe 'create' do
-    it 'creates an event wit valid parameters passed' do
+    it 'creates an event with valid parameters passed' do
       event = Amiando::Event.create(
         :host_id       => Amiando::TEST_USER.id,
         :title         => 'Secret title',
         :country       => 'es',
-        :selected_date => Time.at(0)
+        :selected_date => Time.at(0).utc
       )
 
       Amiando.run
