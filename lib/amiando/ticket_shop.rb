@@ -25,7 +25,7 @@ module Amiando
     map :collect_user_data, :collectUserData
     map :max_possible_number_of_participants, :maxPossibleNumberOfParticipants
     map :num_tickets_checked, :numTicketsChecked
-
+    map :vat_id, :vatId
 
     ##
     # Get the ticket shop of an event.
