@@ -7,7 +7,7 @@ describe Amiando::ApiKey do
   end
 
   after do
-    Amiando.api_key   = nil
+    Amiando.api_key   = Amiando::TEST_KEY
     HydraCache.prefix = nil
   end
 

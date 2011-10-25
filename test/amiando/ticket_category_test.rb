@@ -2,12 +2,10 @@ require "test_helper"
 
 describe Amiando::TicketCategory do
   before do
-    Amiando.api_key = Amiando::TEST_KEY
     HydraCache.prefix = 'TicketCategory'
   end
 
   after do
-    Amiando.api_key = nil
     HydraCache.prefix = nil
   end
 

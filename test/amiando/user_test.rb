@@ -2,12 +2,10 @@ require 'test_helper'
 
 describe Amiando::User do
   before do
-    Amiando.api_key   = Amiando::TEST_KEY
     HydraCache.prefix = 'User'
   end
 
   after do
-    Amiando.api_key   = nil
     HydraCache.prefix = nil
   end
 
@@ -106,8 +104,10 @@ describe Amiando::User do
       key = Amiando::Factory(:api_key)
       Amiando.run
 
-      Amiando.api_key = key.key
-      permission = Amiando::User.request_permission(user.id, '12345')
+      permission = Amiando.with_key(key.key) do
+        Amiando::User.request_permission(user.id, '12345')
+      end
+
       Amiando.run
 
       permission.result.must_equal true
@@ -119,8 +119,10 @@ describe Amiando::User do
       key = Amiando::Factory(:api_key)
       Amiando.run
 
-      Amiando.api_key = key.key
-      permission = Amiando::User.request_permission(user.id, 'wrong password')
+      permission = Amiando.with_key(key.key) do
+        Amiando::User.request_permission(user.id, 'wrong password')
+      end
+
       Amiando.run
 
       permission.result.must_equal false
