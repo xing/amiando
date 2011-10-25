@@ -9,6 +9,7 @@ unless ENV["TRAVIS"]
 end
 
 group :development do
+  gem 'minitest-reporters'
   gem 'guard-minitest'
   if RbConfig::CONFIG['target_os'] =~ /darwin/i
     gem 'rb-fsevent', '>= 0.4.0', :require => false

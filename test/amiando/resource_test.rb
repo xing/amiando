@@ -56,21 +56,21 @@ describe Amiando::Resource do
   end
 
   it 'maps attributes with typecasting' do
-    time      = Time.at(0)
-    expected  = { :creation => '1970-01-01T01:00:00+01:00' }
+    time      = Time.at(0).utc
+    expected  = { :creation => '1970-01-01T00:00:00Z' }
     Wadus.map_params(:creation => time).must_equal expected
   end
 
   it 'automatically typecasts if the object is a Time' do
-    time      = Time.at(0)
-    expected  = { :firstName => '1970-01-01T01:00:00+01:00' }
+    time      = Time.at(0).utc
+    expected  = { :firstName => '1970-01-01T00:00:00Z' }
     Wadus.map_params(:first_name => time).must_equal expected
   end
 
   it 'reverse maps attributes with typecasting' do
-    time      = Time.at(0)
+    time      = Time.at(0).utc
     expected  = { :creation => time }
-    Wadus.reverse_map_params(:creation => '1970-01-01T01:00:00+01:00').must_equal expected
+    Wadus.reverse_map_params(:creation => '1970-01-01T00:00:00Z').must_equal expected
   end
 
   describe 'synchronous calls' do

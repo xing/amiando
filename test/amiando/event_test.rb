@@ -11,23 +11,23 @@ describe Amiando::Event do
 
   describe 'find' do
     it 'finds an already existing event' do
-      original = Amiando::Factory(:event, :identifier => 'wadus')
-      Amiando.run
+      identifier = "event-find-#{HydraCache.revision}"
+      original   = Amiando::Factory.create(:event, :identifier => identifier)
 
       event = Amiando::Event.find(original.id)
       Amiando.run
 
       event.id.must_equal original.id
-      event.identifier.must_equal 'wadus'
+      event.identifier.must_equal identifier
     end
   end
 
   describe 'exists' do
-    it 'checks if an event an already exists' do
-      original = Amiando::Factory(:event, :identifier => 'wadus')
-      Amiando.run
+    it 'checks if an event already exists' do
+      identifier = "event-exists-#{HydraCache.revision}"
+      original   = Amiando::Factory.create(:event, :identifier => identifier)
 
-      exists = Amiando::Event.exists?('wadus')
+      exists = Amiando::Event.exists?(identifier)
       Amiando.run
 
       exists.result.must_equal true
@@ -35,12 +35,12 @@ describe Amiando::Event do
   end
 
   describe 'create' do
-    it 'creates an event wit valid parameters passed' do
+    it 'creates an event with valid parameters passed' do
       event = Amiando::Event.create(
         :host_id       => Amiando::TEST_USER.id,
         :title         => 'Secret title',
         :country       => 'es',
-        :selected_date => Time.at(0)
+        :selected_date => Time.at(0).utc
       )
 
       Amiando.run
@@ -112,10 +112,11 @@ describe Amiando::Event do
 
   describe 'search' do
     it 'finds events by identifier' do
-      event = Amiando::Factory(:event, :identifier => 'waduswadus1234')
+      identifier = "event-search-#{HydraCache.revision}"
+      event = Amiando::Factory(:event, :identifier => identifier)
       Amiando.run
 
-      search = Amiando::Event.search(:identifier => 'waduswadus1234')
+      search = Amiando::Event.search(:identifier => identifier)
       Amiando.run
 
       search.result.must_include event.id
