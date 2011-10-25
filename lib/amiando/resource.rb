@@ -40,6 +40,16 @@ module Amiando
         Hash[mapped_attributes]
       end
 
+      def method_missing(method_name, *args, &block)
+        if match = /sync_(.*)/.match(method_name.to_s)
+          res = self.send(match[1], *args, &block)
+          Amiando.run
+          res
+        else
+          super
+        end
+      end
+
       private
 
       def do_request(object, verb, path, options = {})

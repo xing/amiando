@@ -7,7 +7,12 @@ describe Amiando::Resource do
     map :creation, :creation, :type => :time
 
     def self.create
+      object = new
       post new, 'somewhere'
+      object
+    end
+
+    def populate(response_body)
     end
   end
 
@@ -64,5 +69,12 @@ describe Amiando::Resource do
     time      = Time.at(0)
     expected  = { :creation => time }
     Wadus.reverse_map_params(:creation => '1970-01-01T01:00:00+01:00').must_equal expected
+  end
+
+  describe 'synchronous calls' do
+    it 'accepts synchronous calls' do
+      stub_request(:post, /somewhere/).to_return(:status => 200, :body => '"success":true' })
+      Wadus.sync_create.success.must_be true
+    end
   end
 end
