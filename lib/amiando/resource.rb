@@ -120,8 +120,8 @@ module Amiando
     end
 
     def method_missing(method_name, *args, &block)
-      if @attributes.key?(method_name) && args.empty?
-        @attributes[method_name]
+      if attributes.key?(method_name) && args.empty?
+        attributes[method_name]
       else
         super
       end
