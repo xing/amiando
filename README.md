@@ -28,3 +28,21 @@ You can also do synchronous requests by prepending 'sync_' to the method name:
 All attributes should be used in snake_case format instead of the CamelCase
 used in the official documentation. For example, for a user, you should call
 first_name instead of firstName.
+
+## Documentation
+
+The full amiando API isn't fully implemented yet, however you can find here the
+ones currently available.
+
+* [ApiKey](http://rdoc.info/github/xing/amiando/master/Amiando/ApiKeyt)
+* Partner
+* [User](http://rdoc.info/github/xing/amiando/master/Amiando/User) (some methods
+  still missing)
+* [Event](http://rdoc.info/github/xing/amiando/master/Amiando/Event)
+* [TicketShop](http://rdoc.info/github/xing/amiando/master/Amiando/TicketShop)
+* Ticket
+* [TicketCategory](http://rdoc.info/github/xing/amiando/master/Amiando/TicketCategory)
+* Payment
+* [PaymentType](http://rdoc.info/github/xing/amiando/master/Amiando/PaymentType)
+* Data Synchronization
+* Email
