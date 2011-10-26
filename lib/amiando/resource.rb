@@ -73,7 +73,7 @@ module Amiando
             raise Error::ServiceDown.new(response.body)
           end
 
-          parsed_body = JSON.parse(response.body)
+          parsed_body = MultiJson.decode(response.body)
 
           if parsed_body['errors'] && parsed_body['errors'].include?('com.amiando.api.rest.MissingParam.apikey')
             raise Error::MissingApiKey.new('This call requires an apikey')

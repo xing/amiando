@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency 'typhoeus'
-  s.add_dependency 'json'
+  s.add_dependency 'multi_json'
 
   s.add_development_dependency 'minitest'
   s.add_development_dependency 'webmock'
