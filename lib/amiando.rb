@@ -7,13 +7,15 @@ module Amiando
   autoload :Resource,       'amiando/resource'
   autoload :Boolean,        'amiando/boolean'
   autoload :Result,         'amiando/result'
+  autoload :Autorun,        'amiando/autorun'
+
   autoload :ApiKey,         'amiando/api_key'
   autoload :User,           'amiando/user'
+  autoload :Partner,        'amiando/partner'
   autoload :Event,          'amiando/event'
   autoload :TicketCategory, 'amiando/ticket_category'
   autoload :TicketShop,     'amiando/ticket_shop'
   autoload :PaymentType,    'amiando/payment_type'
-  autoload :Autorun,        'amiando/autorun'
 
   module Error
     class ServiceDown    < Exception; end

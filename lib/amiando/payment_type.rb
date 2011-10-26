@@ -1,23 +1,21 @@
 module Amiando
   class PaymentType < Resource
 
-#     /event/{id}/paymentTypes <-- all paymentTypes of the event
-# /event/{id}/paymentType/create <-- creating a new paymentType
-# /paymentType/{id} <-- returns the paymentType (used for udpates etc)
-
-# PaymentType has just the following three variables:
-
-# Id
-# Type (String of the following: {PAYMENT_TYPE_ELV, PAYMENT_TYPE_CC, PAYMENT_TYPE_INVOICE, PAYMENT_TYPE_PREPAYMENT, PAYMENT_TYPE_PP, PAYMENT_TYPE_ONLOCATION}) [CC = CreditCard, PP = PayPal]
-# Active (boolean)
     ##
     # Create a payment type for an event
     #
     # @param event id
-    # @param [Type] Type (String of the following:
-    #   PAYMENT_TYPE_ELV, PAYMENT_TYPE_CC, PAYMENT_TYPE_INVOICE, PAYMENT_TYPE_PREPAYMENT,
-    #   PAYMENT_TYPE_PP, PAYMENT_TYPE_ONLOCATION) [CC = CreditCard, PP = PayPal]
-    #   It will also accept :cc, :invoice, etc and convert them appropiately
+    # @param string or symbol of the following:
+    #   * PAYMENT_TYPE_ELV
+    #   * PAYMENT_TYPE_CC
+    #   * PAYMENT_TYPE_INVOICE
+    #   * PAYMENT_TYPE_PREPAYMENT
+    #   * PAYMENT_TYPE_PP
+    #   * PAYMENT_TYPE_ONLOCATION
+    #
+    #   [CC = CreditCard, PP = PayPal]
+    #
+    #   It will also accept :cc, :invoice, etc and convert them appropriately
     #
     def self.create(event_id, type)
       unless type =~ /payment_type_\w+/i
@@ -25,12 +23,8 @@ module Amiando
       end
 
       object = Result.new do |response_body, result|
-        if response_body['success']
-          response_body['id']
-        else
-          result.errors = response_body['errors']
-          false
-        end
+        result.errors = response_body['errors']
+        response_body['id'] || false
       end
 
       post object, "api/event/#{event_id}/paymentType/create", :params => { :type => type.upcase }
@@ -38,6 +32,10 @@ module Amiando
       object
     end
 
+    ##
+    # @param event id
+    #
+    # @return [Result] with the list of payment types for that event.
     def self.find_all_by_event_id(event_id)
       object = Result.new do |response_body, result|
         if response_body['success']
@@ -55,6 +53,10 @@ module Amiando
       object
     end
 
+    ##
+    # @param payment type id
+    #
+    # @return [PaymentType] the payment type with that id
     def self.find(payment_type_id)
       object = new
 

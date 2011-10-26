@@ -1,0 +1,60 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 5.6e-05
+body: "{\"id\":262944,\"success\":true}"
+code: 201
+connect_time: 5.6e-05
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/partner/create?version=1&format=json&apikey=H6FEqB3vz7aO86kkTHNLrH2aMHPSfsO1s2CpUhFWTzz5qbCFLb
+first_header_line: HTTP/1.1 201 Created
+headers: |
+  HTTP/1.1 201 Created
+  Date: Wed, 26 Oct 2011 15:37:57 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=B1C68B04E501C518D07E13A4E5087024.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=B1C68B04E501C518D07E13A4E5087024.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=bWtFU0ZzajVvTlR4SThIbDoxMzIwODUzMjcwMjMxOmFiNzBiOTkyNzA0YmU4MTg5NGRkOGQzNThkNjE0Nzkw; Expires=Mon, 24-Oct-2016 15:41:10 GMT; Path=/
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Wed, 26 Oct 2011 17:37:57 GMT
+  Vary: User-Agent
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::NormalizedHeaderHash 
+  Vary: User-Agent
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Transfer-Encoding: chunked
+  Access-Control-Allow-Origin: "*"
+  Content-Type: application/json;charset=UTF-8
+  Date: Wed, 26 Oct 2011 15:37:57 GMT
+  Accept-Ranges: bytes
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: 
+  - JSESSIONID=B1C68B04E501C518D07E13A4E5087024.web01; Path=/; Secure
+  - JSESSIONID=B1C68B04E501C518D07E13A4E5087024.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=bWtFU0ZzajVvTlR4SThIbDoxMzIwODUzMjcwMjMxOmFiNzBiOTkyNzA0YmU4MTg5NGRkOGQzNThkNjE0Nzkw; Expires=Mon, 24-Oct-2016 15:41:10 GMT; Path=/
+  Expires: Wed, 26 Oct 2011 17:37:57 GMT
+  Cache-Control: max-age=7200
+  Accept-Charset: utf-8
+http_version: 
+mock: false
+name_lookup_time: 5.5e-05
+pretransfer_time: 6.1e-05
+request: |-
+  :method => :post,
+  	:url => https://test.amiando.com/api/partner/create?version=1&format=json&apikey=H6FEqB3vz7aO86kkTHNLrH2aMHPSfsO1s2CpUhFWTzz5qbCFLb,
+  	:params => {:adminId=>256142558, :name=>"to be found", :defaultCountry=>"ES", :language=>"en"},
+  	:headers => {"User-Agent"=>"Typhoeus - http://github.com/dbalatero/typhoeus/tree/master"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.162716
+status_message: Created
+time: 0.162762

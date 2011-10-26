@@ -34,8 +34,8 @@ first_name instead of firstName.
 The full amiando API isn't fully implemented yet, however you can find here the
 ones currently available.
 
-* [ApiKey](http://rdoc.info/github/xing/amiando/master/Amiando/ApiKeyt)
-* Partner
+* [ApiKey](http://rdoc.info/github/xing/amiando/master/Amiando/ApiKey)
+* [Partner](http://rdoc.info/github/xing/amiando/master/Amiando/Partner)
 * [User](http://rdoc.info/github/xing/amiando/master/Amiando/User) (some methods
   still missing)
 * [Event](http://rdoc.info/github/xing/amiando/master/Amiando/Event)

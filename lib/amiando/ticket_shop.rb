@@ -34,8 +34,8 @@ module Amiando
     #
     # @return [TicektShop] the event's ticketshop
     def self.find(event_id)
-      object  = new
-      request = get object, "api/event/#{event_id}/ticketShop"
+      object = new
+      get object, "api/event/#{event_id}/ticketShop"
 
       object
     end
@@ -47,8 +47,8 @@ module Amiando
     #
     # @return [Boolean] deferred object indicating the result of the update.
     def self.update(event_id, attributes)
-      object  = Boolean.new('success')
-      request = post object, "/api/event/#{event_id}/ticketShop", :params => map_params(attributes)
+      object = Boolean.new('success')
+      post object, "/api/event/#{event_id}/ticketShop", :params => map_params(attributes)
 
       object
     end

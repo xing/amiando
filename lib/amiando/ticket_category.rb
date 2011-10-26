@@ -35,15 +35,7 @@ module Amiando
     #
     # @param [Hash] attributes
     def self.update(ticket_category_id, attributes)
-      object = Result.new do |response_body, result|
-        if response_body['success']
-          true
-        else
-          result.errors = response_body['errors']
-          false
-        end
-      end
-
+      object = Result.new
       post object, "api/ticketCategory/#{ticket_category_id}", :params => attributes
 
       object

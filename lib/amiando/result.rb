@@ -10,12 +10,16 @@ module Amiando
   class Result
     include Amiando::Autorun
 
-    attr_accessor :request, :response, :errors
+    attr_accessor :request, :response, :errors, :success
 
-    autorun :request, :response, :result, :errors
+    autorun :request, :response, :result, :errors, :success
 
     def initialize(&block)
       @populator = block
+      @populator ||= Proc.new do |response_body, result|
+        result.errors = response_body['errors']
+        response_body['success']
+      end
     end
 
     def populate(response_body)
@@ -24,6 +28,7 @@ module Amiando
       elsif @populator.arity == 2
         @result = @populator.call(response_body, self)
       end
+      @success = response_body['success']
     end
   end
 end

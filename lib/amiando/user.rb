@@ -12,7 +12,7 @@ module Amiando
     # @param [String] username
     def self.exists?(username)
       object  = Boolean.new('exists')
-      request = get object, "api/user/exists",
+      get object, "api/user/exists",
         :params => { :username => username }
 
       object
@@ -28,7 +28,7 @@ module Amiando
         response_body['ids'].first
       end
 
-      request = get object, "api/user/find",
+      get object, "api/user/find",
         :params => { :username => username }
 
       object
@@ -41,7 +41,7 @@ module Amiando
     # @param [Hash] attributes
     def self.create(attributes)
       object  = new
-      request = post object, '/api/user/create',
+      post object, '/api/user/create',
         :params          => map_params(attributes),
         :populate_method => :populate_create
 
@@ -56,7 +56,7 @@ module Amiando
     # @param [String] username
     def self.update(user_id, attributes)
       object  = Boolean.new('success')
-      request = post object, "/api/user/#{user_id}", :params => map_params(attributes)
+      post object, "/api/user/#{user_id}", :params => map_params(attributes)
 
       object
     end
@@ -68,7 +68,7 @@ module Amiando
     # @param user_id
     def self.find(user_id)
       object = new
-      request = get object, "api/user/#{user_id}"
+      get object, "api/user/#{user_id}"
 
       object
     end
@@ -80,7 +80,7 @@ module Amiando
     # @param user_id
     def self.delete(user_id)
       object = Boolean.new('deleted')
-      request = do_request object, :delete, "/api/user/#{user_id}"
+      do_request object, :delete, "/api/user/#{user_id}"
 
       object
     end
@@ -90,16 +90,8 @@ module Amiando
     # @param user_id
     # @param [String] password
     def self.request_permission(user_id, password)
-      object = Result.new do |response_body, result|
-        if response_body['success']
-          true
-        else
-          result.errors = response_body['errors']
-          false
-        end
-      end
-
-      request = post object, "api/user/#{user_id}/requestPermission", :params => { :password => password }
+      object  = Result.new
+      post object, "api/user/#{user_id}/requestPermission", :params => { :password => password }
 
       object
     end
@@ -111,7 +103,7 @@ module Amiando
     # @param user_id
     def self.logout(user_id)
       object = Boolean.new('success')
-      request = post object, "/api/user/#{user_id}/logout"
+      post object, "/api/user/#{user_id}/logout"
 
       object
     end
