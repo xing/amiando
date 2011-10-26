@@ -13,6 +13,7 @@ module Amiando
   autoload :TicketCategory, 'amiando/ticket_category'
   autoload :TicketShop,     'amiando/ticket_shop'
   autoload :PaymentType,    'amiando/payment_type'
+  autoload :Autorun,        'amiando/autorun'
 
   module Error
     class ServiceDown    < Exception; end
@@ -28,6 +29,7 @@ module Amiando
     attr_accessor :api_key
     attr_accessor :logger
     attr_accessor :verbose
+    attr_accessor :autorun
 
     URL       = 'https://amiando.com'
     TEST_URL  = 'https://test.amiando.com'

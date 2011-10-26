@@ -8,7 +8,11 @@ module Amiando
   # After the object is populated, you can ask the result with the result
   # method.
   class Result
+    include Amiando::Autorun
+
     attr_accessor :request, :response, :errors
+
+    autorun :request, :response, :result, :errors
 
     def initialize(&block)
       @populator = block
@@ -19,14 +23,6 @@ module Amiando
         @result = @populator.call(response_body)
       elsif @populator.arity == 2
         @result = @populator.call(response_body, self)
-      end
-    end
-
-    def result
-      if defined?(@result)
-        @result
-      else
-        raise Error::NotInitialized.new('Called result before the query was run')
       end
     end
   end

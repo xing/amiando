@@ -11,11 +11,6 @@ describe Amiando::Resource do
       post object, 'somewhere', :populate_method => :populate_create
       object
     end
-
-    def populate_create(response_body)
-      @success = response_body['success']
-    end
-
   end
 
   it 'raises error when amiando is down' do
@@ -77,6 +72,39 @@ describe Amiando::Resource do
     it 'accepts synchronous calls' do
       stub_request(:post, /somewhere/).to_return(:status => 200, :body => '{"success":true}')
       Wadus.sync_create.success.must_equal true
+    end
+  end
+
+  describe 'autorun' do
+    before do
+      Amiando.autorun = true
+      stub_request(:post, /somewhere/).to_return(:status => 200, :body => '{"success":true, "id": 1}')
+    end
+
+    after do
+      Amiando.autorun = nil
+    end
+
+    let(:wadus) { Wadus.create }
+
+    it 'should return the result when calling autorun' do
+      wadus.id.must_equal 1
+    end
+
+    it 'should return the success' do
+      wadus.success.must_equal true
+    end
+
+    it 'should return no errors' do
+      wadus.errors.must_be_nil
+    end
+
+    it 'should return the request' do
+      wadus.request.wont_be_nil
+    end
+
+    it 'should return the response' do
+      wadus.response.wont_be_nil
     end
   end
 end

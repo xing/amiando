@@ -8,7 +8,11 @@ module Amiando
   # After the object is populated, you can ask the result with the result
   # method.
   class Boolean
+    include Amiando::Autorun
+
     attr_accessor :request, :response
+
+    autorun :request, :response, :result
 
     def initialize(response_attribute)
       @response_attribute = response_attribute.to_s

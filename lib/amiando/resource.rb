@@ -1,7 +1,11 @@
 module Amiando
   class Resource
+    include Amiando::Autorun
+
     attr_accessor :request, :response
     attr_reader :success, :attributes
+
+    autorun :request, :response, :success, :attributes
 
     class << self
       def map(local, remote, options = {})
@@ -124,7 +128,7 @@ module Amiando
     end
 
     def id
-      @attributes[:id]
+      attributes[:id]
     end
 
     def populate(reponse_body)
@@ -151,9 +155,9 @@ module Amiando
     protected
 
     def set_attributes(attributes)
-      @attributes = {}
-
       if attributes
+        @attributes = {}
+
         self.class.reverse_map_params(attributes).each do |k,v|
           @attributes[k.to_sym] = v
         end
