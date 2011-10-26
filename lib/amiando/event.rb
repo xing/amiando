@@ -20,6 +20,8 @@ module Amiando
     ##
     # Creates an event.
     #
+    # @param [Hash] attributes
+    #
     # @return [Event] will not return the full event and only the id attribute
     #   will be available.
     def self.create(attributes)
@@ -34,6 +36,9 @@ module Amiando
     ##
     # Updates an event.
     #
+    # @param id
+    # @param [Hash] attributes
+    #
     # @return [Boolean] if it was successful or not.
     def self.update(id, attributes)
       object = Result.new
@@ -44,6 +49,10 @@ module Amiando
 
     ##
     # Fetch an event
+    #
+    # @param id
+    #
+    # @return [Event]
     def self.find(id)
       object = new
       get object, "/api/event/#{id}"
@@ -53,6 +62,10 @@ module Amiando
 
     ##
     # See if an event id exists
+    #
+    # @param identifier
+    #
+    # @return [Boolean] if it exists or not
     def self.exists?(identifier)
       object = Boolean.new('exists')
       get object, "api/event/exists", :params => { :identifier => identifier }
@@ -63,7 +76,7 @@ module Amiando
     ##
     # Deletes an event
     #
-    # @param [Integer] event id
+    # @param [Integer] id event id
     #
     # @return [Boolean] with the result of the operation
     def self.delete(id)
@@ -76,7 +89,7 @@ module Amiando
     ##
     # Activate an event
     #
-    # @param [Integer] the event id
+    # @param [Integer] id event id
     #
     # @return [Result] if it was activated or not.
     def self.activate(id)
@@ -91,6 +104,7 @@ module Amiando
     #
     # @param [Hash] a hash with 1 entry, either :identifier or :title
     #
+    # @raise [ArgumentError] if no identifier or title supplied, or if both present
     # @return [Result] with an array of ids
     def self.search(by)
       unless by[:identifier].nil? ^ by[:title].nil? # XOR
@@ -104,7 +118,9 @@ module Amiando
     end
 
     ##
-    # @param user id
+    # Find all events from a user
+    #
+    # @param user_id
     #
     # @return [Result] with a list of the event ids by this user
     def self.find_all_by_user_id(user_id)
@@ -115,7 +131,7 @@ module Amiando
       object
     end
 
-    private
+    protected
 
     def populate(response_body)
       extract_attributes_from(response_body, 'event')

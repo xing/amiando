@@ -36,14 +36,17 @@ module Amiando
     URL       = 'https://amiando.com'
     TEST_URL  = 'https://test.amiando.com'
 
+    # Connect to the production server
     def production!
       @production = true
     end
 
+    # Connect to the test server (default)
     def development!
       @production = false
     end
 
+    # @return [String] the url for the environment
     def base_url
       @production ? URL : TEST_URL
     end
@@ -52,6 +55,7 @@ module Amiando
       @requests ||= []
     end
 
+    # Runs all queued requests
     def run
       requests.each{ |request| hydra.queue(request) }
       hydra.run
@@ -63,6 +67,12 @@ module Amiando
       @hydra ||= Typhoeus::Hydra.new
     end
 
+    ##
+    # Allows to switch temporarily the API key
+    #
+    # @param [String] api API key
+    # @param [Block] block block to execute with the given key
+    # @return  the result of the block
     def with_key(key)
       old_key = Amiando.api_key
       Amiando.api_key = key
@@ -70,5 +80,6 @@ module Amiando
     ensure
       Amiando.api_key = old_key
     end
+
   end
 end

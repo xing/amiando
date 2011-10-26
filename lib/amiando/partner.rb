@@ -28,7 +28,7 @@ module Amiando
     ##
     # Updates the partner.
     #
-    # @param the internal id of the partner to update.
+    # @param id the internal id of the partner to update.
     # @param [Hash] attributes
     #
     # @return [Result] saying if the update was successful
@@ -40,7 +40,9 @@ module Amiando
     end
 
     ##
-    # @param id of the partner
+    # Find a partner
+    #
+    # @param id id of the partner
     #
     # @return [Partner] the partner with that id
     def self.find(id)
@@ -57,5 +59,3 @@ module Amiando
     end
   end
 end
-
-

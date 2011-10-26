@@ -7,7 +7,10 @@ module Amiando
     ##
     # Creates an {ApiKey}.
     #
-    # @param [Hash] possible attributes that can be set on creation.
+    # @param [Hash] attributes possible attributes that can be set on creation.
+    #
+    # @raise [ArgumentError] if no name provided in attributes
+    # @return [ApiKey]
     def self.create(attributes)
       raise ArgumentError.new('ApiKey name field is mandatory') unless attributes[:name]
 
@@ -20,13 +23,16 @@ module Amiando
     ##
     # Updates an {ApiKey}.
     #
-    # @param [Hash] possible attributes that can be updated.
+    # @param [Hash] attributes possible attributes that can be updated.
+    # @return [Boolean]  the result value
     def self.update(id, attributes)
       object = Boolean.new(:success)
       post object, "/api/apiKey/#{id}", :params => attributes
 
       object
     end
+
+    protected
 
     def populate(response_body)
       extract_attributes_from(response_body, 'apiKey')

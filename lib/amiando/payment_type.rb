@@ -4,8 +4,8 @@ module Amiando
     ##
     # Create a payment type for an event
     #
-    # @param event id
-    # @param string or symbol of the following:
+    # @param event_id
+    # @param type string or symbol of the following:
     #   * PAYMENT_TYPE_ELV
     #   * PAYMENT_TYPE_CC
     #   * PAYMENT_TYPE_INVOICE
@@ -33,7 +33,9 @@ module Amiando
     end
 
     ##
-    # @param event id
+    # Find all Payment Types of an event
+    #
+    # @param event_id
     #
     # @return [Result] with the list of payment types for that event.
     def self.find_all_by_event_id(event_id)
@@ -54,7 +56,9 @@ module Amiando
     end
 
     ##
-    # @param payment type id
+    # Find a Payment Type
+    #
+    # @param payment_type_id
     #
     # @return [PaymentType] the payment type with that id
     def self.find(payment_type_id)

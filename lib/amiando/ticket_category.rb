@@ -21,6 +21,8 @@ module Amiando
     #
     # @param event_id
     # @param [Hash] attributes
+    #
+    # @return [TicketCategory] only id or errors are set
     def self.create(event_id, attributes)
       object = new
       post object, "api/event/#{event_id}/ticketCategory/create",
@@ -33,7 +35,10 @@ module Amiando
     ##
     # Update  a ticket_category
     #
+    # @param ticket_category_id
     # @param [Hash] attributes
+    #
+    # @return [Result] if it was succesful or not with possible errors
     def self.update(ticket_category_id, attributes)
       object = Result.new
       post object, "api/ticketCategory/#{ticket_category_id}", :params => attributes
@@ -44,7 +49,7 @@ module Amiando
     ##
     # Find a ticket category.
     #
-    # @param ticket category id
+    # @param ticket_category_id
     #
     # @return [TicketCategory]
     def self.find(ticket_category_id)
@@ -55,7 +60,7 @@ module Amiando
     end
 
     ##
-    # @param event id
+    # @param event_id
     # @param [Symbol]
     #   :ids if you only want to fetch the ids.
     #   :full if you want the whole objects
@@ -82,7 +87,7 @@ module Amiando
       object
     end
 
-    private
+    protected
 
     def populate(response_body)
       extract_attributes_from(response_body, 'ticketCategory')

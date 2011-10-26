@@ -43,7 +43,8 @@ module Amiando
     ##
     # Updates the ticket shop.
     #
-    # @param [String] username
+    # @param event_id
+    # @param [Hash] attributes
     #
     # @return [Boolean] deferred object indicating the result of the update.
     def self.update(event_id, attributes)
@@ -53,8 +54,7 @@ module Amiando
       object
     end
 
-
-    private
+    protected
 
     def populate(response_body)
       extract_attributes_from(response_body, 'ticketShop')
