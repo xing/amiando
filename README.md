@@ -5,6 +5,17 @@ documentation here:
 
 http://developers.amiando.com/index.php/REST_API
 
+## Installation
+
+Simply install with:
+
+    gem install amiando
+
+To parse the json results we use the [multi_json](https://rubygems.org/gems/multi_json)
+gem. We suggest that you add at least one fast json parsing library, like
+[json](https://rubygems.org/gems/json) or [yajl-ruby](https://rubygems.org/gems/yajl-ruby).
+Otherwise it will use `multi_json`'s bundled json parser.
+
 ## Basic usage
 
 The gem has been implemented with the idea that requests can be done in
@@ -23,7 +34,7 @@ You can also do synchronous requests by prepending 'sync_' to the method name:
 
     albert = Amiando::User.sync_find(1234)
 
-### Note
+### Notation
 
 All attributes should be used in snake_case format instead of the CamelCase
 used in the official documentation. For example, for a user, you should call
