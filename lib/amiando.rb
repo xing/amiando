@@ -1,6 +1,6 @@
 require "amiando/version"
 require "typhoeus"
-require "json"
+require "multi_json"
 
 module Amiando
   autoload :Request,        'amiando/request'
