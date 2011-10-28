@@ -32,7 +32,7 @@ module Amiando
     #
     # @param event id
     #
-    # @return [TicektShop] the event's ticketshop
+    # @return [TicketShop] the event's ticketshop
     def self.find(event_id)
       object = new
       get object, "api/event/#{event_id}/ticketShop"
