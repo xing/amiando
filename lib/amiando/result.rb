@@ -10,7 +10,8 @@ module Amiando
   class Result
     include Amiando::Autorun
 
-    attr_accessor :request, :response, :errors, :success
+    attr_accessor :request, :response, :errors
+    attr_reader :result, :success
 
     autorun :request, :response, :result, :errors, :success
 

@@ -11,8 +11,9 @@ module Amiando
     include Amiando::Autorun
 
     attr_accessor :request, :response
+    attr_reader :result, :success
 
-    autorun :request, :response, :result
+    autorun :request, :response, :result, :success
 
     def initialize(response_attribute)
       @response_attribute = response_attribute.to_s
@@ -21,16 +22,9 @@ module Amiando
     def populate(response_body)
       if response_body.key?(@response_attribute)
         @result = response_body[@response_attribute]
+        @success = response_body['success']
       else
         raise Error::NotInitialized.new("The response doesn't have the expected attribute")
-      end
-    end
-
-    def result
-      if defined?(@result)
-        @result
-      else
-        raise Error::NotInitialized.new('Called result before the query was run')
       end
     end
   end

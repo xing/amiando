@@ -18,4 +18,11 @@ describe Amiando::Boolean do
 
     boolean.result.must_equal false
   end
+
+  it "sets the success value from the request" do
+    boolean = Amiando::Boolean.new(:wadus)
+    boolean.populate('wadus' => true, 'success' => false)
+
+    boolean.success.must_equal false
+  end
 end
