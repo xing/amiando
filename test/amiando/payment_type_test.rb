@@ -62,4 +62,12 @@ describe Amiando::PaymentType do
       update.result.must_equal true
     end
   end
+
+  describe 'type' do
+    it 'returns the amiando type string' do
+      payment_type = Amiando::PaymentType.new(:type => 'PAYMENT_TYPE_PP')
+      payment_type.type.must_equal 'PAYMENT_TYPE_PP'
+    end
+  end
+
 end
