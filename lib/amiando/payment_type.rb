@@ -63,8 +63,21 @@ module Amiando
     # @return [PaymentType] the payment type with that id
     def self.find(payment_type_id)
       object = new
-
       get object, "api/paymentType/#{payment_type_id}"
+
+      object
+    end
+
+    ##
+    # Update a payment type
+    #
+    # @param payment_type_id
+    # @param [Hash] attributes attributes to be updated
+    #
+    # @return [Boolean] result of the operation
+    def self.update(payment_type_id, attributes)
+      object = Boolean.new('success')
+      post object, "api/paymentType/#{payment_type_id}"
 
       object
     end

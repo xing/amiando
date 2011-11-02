@@ -51,4 +51,15 @@ describe Amiando::PaymentType do
       payment_types.result.must_include payment_type
     end
   end
+
+  describe 'update' do
+    it 'updates the given attributes' do
+      payment_id = Amiando::PaymentType.sync_create(event.id, :invoice).result
+
+      update = Amiando::PaymentType.update(payment_id, :active => false)
+      Amiando.run
+
+      update.result.must_equal true
+    end
+  end
 end
