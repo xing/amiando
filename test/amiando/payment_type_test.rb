@@ -54,12 +54,15 @@ describe Amiando::PaymentType do
 
   describe 'update' do
     it 'updates the given attributes' do
+      event = Amiando::Factory.create(:event, :name => "event-update-#{HydraCache.revision}")
       payment_id = Amiando::PaymentType.sync_create(event.id, :invoice).result
-
       update = Amiando::PaymentType.update(payment_id, :active => false)
       Amiando.run
 
       update.result.must_equal true
+
+      payment_type = Amiando::PaymentType.sync_find(payment_id)
+      payment_type.active.must_equal false
     end
   end
 
