@@ -77,7 +77,7 @@ module Amiando
     # @return [Boolean] result of the operation
     def self.update(payment_type_id, attributes)
       object = Boolean.new('success')
-      post object, "api/paymentType/#{payment_type_id}"
+      post object, "api/paymentType/#{payment_type_id}", :params => attributes
 
       object
     end
