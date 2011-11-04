@@ -27,6 +27,21 @@ describe Amiando::PaymentType do
       payment_type.result.must_equal false
       payment_type.errors.must_include "com.amiando.api.rest.paymentType.PaymentTypeAlreadyExists"
     end
+
+    it 'should accept a Hash as a param' do
+      payment_type = Amiando::PaymentType.create(event.id, :type => :cc)
+      payment_type.request.params.must_equal(:type => "PAYMENT_TYPE_CC")
+    end
+
+    it 'should accept a payment string as a param' do
+      payment_type = Amiando::PaymentType.create(event.id, :type => "PAYMENT_TYPE_CC")
+      payment_type.request.params.must_equal(:type => "PAYMENT_TYPE_CC")
+    end
+
+    it 'should accept a short string as a param' do
+      payment_type = Amiando::PaymentType.create(event.id, "CC")
+      payment_type.request.params.must_equal(:type => "PAYMENT_TYPE_CC")
+    end
   end
 
   describe 'find' do

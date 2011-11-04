@@ -18,7 +18,9 @@ module Amiando
     #   It will also accept :cc, :invoice, etc and convert them appropriately
     #
     def self.create(event_id, type)
-      unless type =~ /payment_type_\w+/i
+      type = type[:type] if type.is_a?(Hash)
+
+      unless type =~ /^payment_type_\w+/i
         type = "payment_type_#{type}"
       end
 
