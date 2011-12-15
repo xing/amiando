@@ -15,16 +15,23 @@ module Amiando
       super(path, :method => verb, :params => params, :verbose => Amiando.verbose)
     end
 
+    def log_request
+      if Amiando.logger && Amiando.logger.debug?
+        Amiando.logger.debug "#{self.method.to_s.upcase} request #{filter_log(url)} with body #{filter_log(self.params.inspect)}"
+      end
+    end
+
     def log_response
       if Amiando.logger
-        filtered_url = url.gsub(/password=([^&]+)/, "password=[FILTERED]")
-        Amiando.logger.info "REST request #{filtered_url} returned #{response.code} and took #{response.time} seconds"
-
+        Amiando.logger.info "#{self.method.to_s.upcase} request #{filter_log(url)} returned #{response.code} and took #{response.time} seconds"
         if Amiando.logger.debug? && response.body
-          filtered_body = response.body.inspect.gsub(/password: .*/,'password: [FILTERED]')
-          Amiando.logger.debug "REST request body: #{filtered_body}"
+          Amiando.logger.debug "#{self.method.to_s.upcase} response body: #{filter_log(response.body.inspect)}"
         end
       end
+    end
+
+    def filter_log(text)
+      text.gsub(/password=([^&]+)/, "password=[FILTERED]").gsub(/password: .*/,'password: [FILTERED]')
     end
 
     private

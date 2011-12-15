@@ -60,6 +60,8 @@ module Amiando
         req = Request.new(object, verb, path, options[:params] || {})
         object.request = req
 
+        req.log_request
+
         req.on_complete do |response|
           req.log_response
 
