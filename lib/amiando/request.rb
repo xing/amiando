@@ -17,15 +17,15 @@ module Amiando
 
     def log_request
       if Amiando.logger && Amiando.logger.debug?
-        Amiando.logger.debug "REST request #{filter_log(url)} with body #{filter_log(self.params.inspect)}"
+        Amiando.logger.debug "#{self.method.to_s.upcase} request #{filter_log(url)} with body #{filter_log(self.params.inspect)}"
       end
     end
 
     def log_response
       if Amiando.logger
-        Amiando.logger.info "REST request #{filter_log(url)} returned #{response.code} and took #{response.time} seconds"
+        Amiando.logger.info "#{self.method.to_s.upcase} request #{filter_log(url)} returned #{response.code} and took #{response.time} seconds"
         if Amiando.logger.debug? && response.body
-          Amiando.logger.debug "REST response body: #{filter_log(response.body.inspect)}"
+          Amiando.logger.debug "#{self.method.to_s.upcase} response body: #{filter_log(response.body.inspect)}"
         end
       end
     end
