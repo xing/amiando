@@ -6,10 +6,22 @@ describe Amiando::Resource do
     map :last_name , :lastName
     map :creation, :creation, :type => :time
 
-    def self.create
+    def self.create(params = {})
       object = new
-      post object, 'somewhere', :populate_method => :populate_create
+      post object, 'somewhere', :params => params, :populate_method => :populate_create
       object
+    end
+
+    def self.find(id)
+      object = new
+      get object, 'somewhere', :populate_method => :populate_test
+      object
+    end
+
+    private
+
+    def populate_test(body)
+      extract_attributes_from(body, 'wadus')
     end
   end
 
@@ -66,6 +78,19 @@ describe Amiando::Resource do
     time      = Time.at(0).utc
     expected  = { :creation => time }
     Wadus.reverse_map_params(:creation => '1970-01-01T00:00:00Z').must_equal expected
+  end
+
+  it 'automatically maps attributes for a request' do
+    result = Wadus.create :first_name => 'George'
+    result.request.params.must_equal(:firstName => 'George')
+  end
+
+  it 'automatically reverse maps attributes on responses' do
+    stub_request(:any, /somewhere/).to_return(:status => 200, :body => '{"wadus":{"firstName":"George"}}')
+    result = Wadus.find(1)
+    Amiando.run
+
+    result.attributes.must_equal(:first_name => "George")
   end
 
   describe 'synchronous calls' do

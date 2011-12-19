@@ -57,7 +57,7 @@ module Amiando
       private
 
       def do_request(object, verb, path, options = {})
-        req = Request.new(object, verb, path, options[:params] || {})
+        req = Request.new(object, verb, path, map_params(options[:params] || {}))
         object.request = req
 
         req.log_request

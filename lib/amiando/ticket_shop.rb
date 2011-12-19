@@ -49,7 +49,7 @@ module Amiando
     # @return [Boolean] deferred object indicating the result of the update.
     def self.update(event_id, attributes)
       object = Boolean.new('success')
-      post object, "/api/event/#{event_id}/ticketShop", :params => map_params(attributes)
+      post object, "/api/event/#{event_id}/ticketShop", :params => attributes
 
       object
     end

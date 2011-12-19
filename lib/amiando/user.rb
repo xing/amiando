@@ -42,7 +42,7 @@ module Amiando
     def self.create(attributes)
       object  = new
       post object, '/api/user/create',
-        :params          => map_params(attributes),
+        :params          => attributes,
         :populate_method => :populate_create
 
       object
@@ -56,7 +56,7 @@ module Amiando
     # @param [String] username
     def self.update(user_id, attributes)
       object  = Boolean.new('success')
-      post object, "/api/user/#{user_id}", :params => map_params(attributes)
+      post object, "/api/user/#{user_id}", :params => attributes
 
       object
     end

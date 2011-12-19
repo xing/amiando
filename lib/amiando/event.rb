@@ -27,7 +27,7 @@ module Amiando
     def self.create(attributes)
       object = new
       post object, '/api/event/create',
-        :params          => map_params(attributes),
+        :params          => attributes,
         :populate_method => :populate_create
 
       object
@@ -42,7 +42,7 @@ module Amiando
     # @return [Boolean] if it was successful or not.
     def self.update(id, attributes)
       object = Result.new
-      post object, "/api/event/#{id}", :params => map_params(attributes)
+      post object, "/api/event/#{id}", :params => attributes
 
       object
     end
