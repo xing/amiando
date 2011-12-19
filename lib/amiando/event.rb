@@ -39,7 +39,7 @@ module Amiando
     # @param id
     # @param [Hash] attributes
     #
-    # @return [Boolean] if it was successful or not.
+    # @return [Result] if it was successful or not.
     def self.update(id, attributes)
       object = Result.new
       post object, "/api/event/#{id}", :params => attributes
