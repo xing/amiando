@@ -22,6 +22,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'multi_json'
 
   s.add_development_dependency 'minitest', '2.9.0'
-  s.add_development_dependency 'webmock'
+  s.add_development_dependency 'webmock', '~> 1.7.6'
   s.add_development_dependency 'rake'
 end

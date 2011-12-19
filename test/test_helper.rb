@@ -16,6 +16,7 @@ rescue LoadError; end
 
 require 'support/hydra_cache'
 require 'support/factory'
+require 'support/hydra_monkey_patch'
 
 Amiando.hydra.cache_setter &HydraCache.method(:setter)
 Amiando.hydra.cache_getter &HydraCache.method(:getter)
