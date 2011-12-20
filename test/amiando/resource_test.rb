@@ -76,8 +76,8 @@ describe Amiando::Resource do
 
   it 'reverse maps attributes with typecasting' do
     time      = Time.at(0).utc
-    expected  = { :creation => time }
-    Wadus.reverse_map_params(:creation => '1970-01-01T00:00:00Z').must_equal expected
+    expected  = { :creation_time => time }
+    Wadus.reverse_map_params(:creationTime => '1970-01-01T00:00:00Z').must_equal expected
   end
 
   it 'automatically maps attributes for a request' do

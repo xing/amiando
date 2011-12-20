@@ -38,7 +38,7 @@ module Amiando
         mapped_attributes = attributes.map do |key,value|
           key        = key.to_sym
           mapped_key = inverted_mapping[key] || key
-          value      = inverse_typecast(key, value)
+          value      = inverse_typecast(mapped_key, value)
           [mapped_key, value]
         end
         Hash[mapped_attributes]
