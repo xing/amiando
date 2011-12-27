@@ -6,14 +6,12 @@ module Amiando
     #
     # @param event_id
     # @param type string or symbol of the following:
-    #   * PAYMENT_TYPE_ELV
-    #   * PAYMENT_TYPE_CC
+    #   * PAYMENT_TYPE_ELV (debit card)
+    #   * PAYMENT_TYPE_CC (credit card)
     #   * PAYMENT_TYPE_INVOICE
     #   * PAYMENT_TYPE_PREPAYMENT
-    #   * PAYMENT_TYPE_PP
+    #   * PAYMENT_TYPE_PP (PayPal)
     #   * PAYMENT_TYPE_ONLOCATION
-    #
-    #   [CC = CreditCard, PP = PayPal]
     #
     #   It will also accept :cc, :invoice, etc and convert them appropriately
     #
