@@ -28,9 +28,16 @@ module Amiando
   end
 
   class << self
+
+    # Api key to be used at all times.
     attr_accessor :api_key
+
+    # Logger instance. There's no logger by default.
     attr_accessor :logger
+
     attr_accessor :verbose
+
+    # If set to true, will run the requests automatically when needed.
     attr_accessor :autorun
 
     URL       = 'https://amiando.com'
@@ -63,10 +70,6 @@ module Amiando
       @requests = []
     end
 
-    def hydra
-      @hydra ||= Typhoeus::Hydra.new
-    end
-
     ##
     # Allows to switch temporarily the API key
     #
@@ -79,6 +82,12 @@ module Amiando
       yield
     ensure
       Amiando.api_key = old_key
+    end
+
+    private
+
+    def hydra
+      @hydra ||= Typhoeus::Hydra.new
     end
 
   end

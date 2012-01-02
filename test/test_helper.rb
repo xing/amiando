@@ -18,8 +18,8 @@ require 'support/hydra_cache'
 require 'support/factory'
 require 'support/hydra_monkey_patch'
 
-Amiando.hydra.cache_setter &HydraCache.method(:setter)
-Amiando.hydra.cache_getter &HydraCache.method(:getter)
+Amiando.send(:hydra).cache_setter &HydraCache.method(:setter)
+Amiando.send(:hydra).cache_getter &HydraCache.method(:getter)
 HydraCache.revision = 2
 
 WebMock.allow_net_connect!
