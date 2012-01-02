@@ -17,14 +17,15 @@ module Amiando
   autoload :TicketShop,     'amiando/ticket_shop'
   autoload :PaymentType,    'amiando/payment_type'
 
-  module Error
-    class ServiceDown    < Exception; end
-    class ApiKeyNeeded   < Exception; end
-    class NotAuthorized  < Exception; end
-    class NotFound       < Exception; end
-    class NotImplemented < Exception; end
-    class NotInitialized < Exception; end
-    class MissingApiKey  < Exception; end
+  class Error < StandardError
+    class ServiceDown    < Error; end
+    class Timeout        < Error; end
+    class ApiKeyNeeded   < Error; end
+    class NotAuthorized  < Error; end
+    class NotFound       < Error; end
+    class NotImplemented < Error; end
+    class NotInitialized < Error; end
+    class MissingApiKey  < Error; end
   end
 
   class << self

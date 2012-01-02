@@ -65,6 +65,10 @@ module Amiando
         req.on_complete do |response|
           req.log_response
 
+          if response.timed_out?
+            raise Error::Timeout
+          end
+
           # Raise different errors depending on the return codes
           case response.code
           when 403
@@ -73,6 +77,8 @@ module Amiando
             raise Error::NotFound.new(response.body)
           when 503
             raise Error::ServiceDown.new(response.body)
+          when 0
+            raise Error.new(response.body)
           end
 
           parsed_body = MultiJson.decode(response.body)

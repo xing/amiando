@@ -28,10 +28,31 @@ describe Amiando::Resource do
   it 'raises error when amiando is down' do
     stub_request(:post, /somewhere/).to_return(:status => 503)
     lambda {
-      key = Wadus.create
+      Wadus.create
       Amiando.run
     }.must_raise Amiando::Error::ServiceDown
   end
+
+  ##
+  # Not working because of issue between webmock and typhoeus
+  #
+  # it 'raises error when the request times out' do
+  #   stub_request(:post, /somewhere/).to_timeout
+  #   lambda {
+  #     Wadus.create
+  #     Amiando.run
+  #   }.must_raise Amiando::Error::Timeout
+  # end
+
+  it 'raises error when the request returns code 0' do
+    stub_request(:post, /somewhere/).to_return(:status => 0)
+
+    lambda {
+      Wadus.create
+      Amiando.run
+    }.must_raise Amiando::Error
+  end
+
 
   it 'raises an error if populate method is not implemented' do
     lambda {
