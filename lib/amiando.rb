@@ -40,6 +40,9 @@ module Amiando
     # If set to true, will run the requests automatically when needed.
     attr_accessor :autorun
 
+    # Timeout value (in milliseconds). Default: 15 seconds.
+    attr_accessor :timeout
+
     URL       = 'https://amiando.com'
     TEST_URL  = 'https://test.amiando.com'
 
@@ -91,4 +94,9 @@ module Amiando
     end
 
   end
+
+  ##
+  # Default timeout of 15 seconds
+  self.timeout = 15000
+
 end

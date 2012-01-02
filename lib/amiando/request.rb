@@ -12,7 +12,7 @@ module Amiando
         params = default_params.merge(params || {})
       end
 
-      super(path, :method => verb, :params => params, :verbose => Amiando.verbose)
+      super(path, :method => verb, :params => params, :verbose => Amiando.verbose, :timeout => Amiando.timeout)
     end
 
     def log_request
