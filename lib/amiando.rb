@@ -41,10 +41,13 @@ module Amiando
     # If set to true, will run the requests automatically when needed.
     attr_accessor :autorun
 
+    # You can configure the amiando end point manually
+    attr_writer   :base_url
+
     # Timeout value (in milliseconds). Default: 15 seconds.
     attr_accessor :timeout
 
-    URL       = 'https://amiando.com'
+    URL       = 'https://www.amiando.com'
     TEST_URL  = 'https://test.amiando.com'
 
     # Connect to the production server
@@ -59,7 +62,7 @@ module Amiando
 
     # @return [String] the url for the environment
     def base_url
-      @production ? URL : TEST_URL
+      @base_url || (@production ? URL : TEST_URL)
     end
 
     def requests

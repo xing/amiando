@@ -7,8 +7,14 @@ describe Amiando do
 
   it 'should return the right url for the production environment' do
     Amiando.production!
-    Amiando.base_url.must_equal 'https://amiando.com'
+    Amiando.base_url.must_equal 'https://www.amiando.com'
     Amiando.development!
+  end
+
+  it 'should allow a configurable url' do
+    Amiando.base_url = 'https://something.amiando.com'
+    Amiando.base_url.must_equal 'https://something.amiando.com'
+    Amiando.base_url = nil
   end
 
   describe 'logger' do
