@@ -1,6 +1,7 @@
 require "amiando/version"
 require "typhoeus"
 require "multi_json"
+require "ostruct"
 
 module Amiando
   autoload :Request,        'amiando/request'
@@ -16,6 +17,7 @@ module Amiando
   autoload :TicketCategory, 'amiando/ticket_category'
   autoload :TicketShop,     'amiando/ticket_shop'
   autoload :PaymentType,    'amiando/payment_type'
+  autoload :TicketType,     'amiando/ticket_type'
 
   class Error < StandardError
     class ServiceDown    < Error; end

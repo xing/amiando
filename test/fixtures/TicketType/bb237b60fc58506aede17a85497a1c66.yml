@@ -1,0 +1,60 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 0.114731
+body: "{\"results\":{\"availableTicketTypes\":[\"TICKETTYPE_PAPER\",\"TICKETTYPE_ETICKET\"],\"ticketTypes\":[{\"id\":302991,\"active\":true,\"type\":\"TICKETTYPE_ETICKET\"},{\"id\":302990,\"active\":true,\"type\":\"TICKETTYPE_PAPER\"}]},\"success\":true}"
+code: 200
+connect_time: 0.059734
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/event/440339/ticketTypes?apikey=EHynu2WfcVkkO3VRce0ZWtWKplIpXjlhCuQuDn7s1MgKF9ztR0&format=json&version=1
+first_header_line: HTTP/1.1 200 OK
+headers: |
+  HTTP/1.1 200 OK
+  Date: Mon, 30 Jan 2012 10:15:07 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=C5873E04AC7A7A49EEE8D51EF05956EB.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=C5873E04AC7A7A49EEE8D51EF05956EB.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=TDlud1o4RFFxR1dpNzB5ejoxMzI5MTI4NDU4MjMzOmYxYWFkMjI2YjlmOTQyZmY0OTY5Y2IwNDc3MDdlZGE0; Expires=Sat, 28-Jan-2017 10:20:58 GMT; Path=/
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Mon, 30 Jan 2012 12:15:07 GMT
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::NormalizedHeaderHash 
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Transfer-Encoding: chunked
+  Access-Control-Allow-Origin: "*"
+  Content-Type: application/json;charset=UTF-8
+  Date: Mon, 30 Jan 2012 10:15:07 GMT
+  Accept-Ranges: bytes
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: 
+  - JSESSIONID=C5873E04AC7A7A49EEE8D51EF05956EB.web01; Path=/; Secure
+  - JSESSIONID=C5873E04AC7A7A49EEE8D51EF05956EB.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=TDlud1o4RFFxR1dpNzB5ejoxMzI5MTI4NDU4MjMzOmYxYWFkMjI2YjlmOTQyZmY0OTY5Y2IwNDc3MDdlZGE0; Expires=Sat, 28-Jan-2017 10:20:58 GMT; Path=/
+  Expires: Mon, 30 Jan 2012 12:15:07 GMT
+  Cache-Control: max-age=7200
+  Accept-Charset: utf-8
+http_version: 
+mock: false
+name_lookup_time: 0.002571
+pretransfer_time: 0.114735
+primary_ip: 213.61.176.214
+request: |-
+  :method => :get,
+  	:url => https://test.amiando.com/api/event/440339/ticketTypes?apikey=EHynu2WfcVkkO3VRce0ZWtWKplIpXjlhCuQuDn7s1MgKF9ztR0&format=json&version=1,
+  	:params => {:apikey=>"EHynu2WfcVkkO3VRce0ZWtWKplIpXjlhCuQuDn7s1MgKF9ztR0", :version=>1, :format=>:json}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.289408
+status_message: OK
+time: 0.289459
