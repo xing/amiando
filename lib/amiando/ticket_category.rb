@@ -5,15 +5,6 @@ module Amiando
   class TicketCategory < Resource
     map :sale_start,         :saleStart, :type => :time
     map :sale_end,           :saleEnd,   :type => :time
-    map :reserved_count,     :reservedCount
-    map :min_sell,           :minSell
-    map :max_sell,           :maxSell
-    map :default_value,      :defaultValue
-    map :min_sell_required,  :minSellRequired
-    map :ticket_description, :ticketDescription
-    map :display_price,      :displayPrice
-    map :display_quantity,   :displayQuantity
-    map :price_editable,     :priceEditable
 
     ##
     # Creates a ticket category for an event

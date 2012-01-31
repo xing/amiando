@@ -9,6 +9,7 @@ module Amiando
   autoload :Boolean,        'amiando/boolean'
   autoload :Result,         'amiando/result'
   autoload :Autorun,        'amiando/autorun'
+  autoload :Utils,          'amiando/utils'
 
   autoload :ApiKey,         'amiando/api_key'
   autoload :User,           'amiando/user'

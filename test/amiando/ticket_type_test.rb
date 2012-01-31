@@ -28,19 +28,25 @@ describe Amiando::TicketType do
       ticket_type.errors.must_include "com.amiando.api.rest.ticketType.TicketTypeNotAllowed"
     end
 
-    it 'should accept a Hash as a param' do
-      ticket_type = Amiando::TicketType.create(event.id, :type => :eticket)
-      ticket_type.request.params.must_equal(:type => "TICKETTYPE_ETICKET")
-    end
+    describe 'param convertion' do
+      after do
+        Amiando.reset_requests
+      end
 
-    it 'should accept a ticket string as a param' do
-      ticket_type = Amiando::TicketType.create(event.id, :type => "TICKETTYPE_ETICKET")
-      ticket_type.request.params.must_equal(:type => "TICKETTYPE_ETICKET")
-    end
+      it 'should accept a Hash as a param' do
+        ticket_type = Amiando::TicketType.create(event.id, :type => :eticket)
+        ticket_type.request.params.must_equal(:type => "TICKETTYPE_ETICKET")
+      end
 
-    it 'should accept a short string as a param' do
-      ticket_type = Amiando::TicketType.create(event.id, "ETICKET")
-      ticket_type.request.params.must_equal(:type => "TICKETTYPE_ETICKET")
+      it 'should accept a ticket string as a param' do
+        ticket_type = Amiando::TicketType.create(event.id, :type => "TICKETTYPE_ETICKET")
+        ticket_type.request.params.must_equal(:type => "TICKETTYPE_ETICKET")
+      end
+
+      it 'should accept a short string as a param' do
+        ticket_type = Amiando::TicketType.create(event.id, "ETICKET")
+        ticket_type.request.params.must_equal(:type => "TICKETTYPE_ETICKET")
+      end
     end
   end
 

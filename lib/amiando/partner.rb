@@ -3,13 +3,6 @@ module Amiando
   ##
   # http://developers.amiando.com/index.php/REST_API_Partner
   class Partner < Resource
-    map :admin_id, :adminId
-    map :default_country, :defaultCountry
-    map :menu_css_url, :menuCssUrl
-    map :ticket_shop_css_url, :ticketShopCssUrl
-    map :sso_callback, :ssoCallback
-    map :referrer_partner_id, :referrerPartnerId
-
     ##
     # Creates a partner.
     #

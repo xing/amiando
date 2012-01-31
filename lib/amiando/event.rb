@@ -3,17 +3,8 @@ module Amiando
   ##
   # http://developers.amiando.com/index.php/REST_API_Events
   class Event < Resource
-    map :host_id,                  :hostId
     map :selected_date,            :selectedDate,     :type => :time
     map :selected_end_date,        :selectedEndDate,  :type => :time
-    map :short_description,        :shortDescription
-    map :event_type,               :eventType
-    map :organisator_display_name, :organisatorDisplayName
-    map :partner_event_url,        :partnerEventUrl
-    map :publish_search_engines,   :publishSearchEngines
-    map :search_engine_tags,       :searchEngineTags
-    map :location_description,     :locationDescription
-    map :zip_code,                 :zipCode
     map :creation_time,            :creationTime,     :type => :time
     map :last_modified,            :lastModified,     :type => :time
 

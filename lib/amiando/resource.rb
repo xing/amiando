@@ -14,11 +14,11 @@ module Amiando
       end
 
       def typecasting
-        @@typecasting ||= {}
+        @typecasting ||= {}
       end
 
       def mapping
-        @@mapping ||= {}
+        @mapping ||= {}
       end
 
       ##
@@ -26,7 +26,7 @@ module Amiando
       # to   { :firstName  => '1', :lastName   => '2' }
       def map_params(attributes)
         mapped_attributes = attributes.map do |key,value|
-          mapped_key = mapping[key] || key
+          mapped_key = mapping[key] || Utils.camelize(key, :lower).to_sym
           value = typecast(key, value)
           [mapped_key, value]
         end
@@ -37,7 +37,7 @@ module Amiando
         inverted_mapping = mapping.invert
         mapped_attributes = attributes.map do |key,value|
           key        = key.to_sym
-          mapped_key = inverted_mapping[key] || key
+          mapped_key = inverted_mapping[key] || Utils.underscore(key).to_sym
           value      = inverse_typecast(mapped_key, value)
           [mapped_key, value]
         end

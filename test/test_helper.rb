@@ -32,6 +32,10 @@ module Amiando
   self.api_key = TEST_KEY = Amiando::Factory.create(:api_key, :name => 'test key').key
 
   TEST_USER = Amiando::Factory.create(:user, :username => "jorgellop-base-#{HydraCache.revision}@example.com")
+
+  def self.reset_requests
+    @requests = []
+  end
 end
 
 HydraCache.prefix = nil

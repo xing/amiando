@@ -3,9 +3,6 @@ module Amiando
   ##
   # http://developers.amiando.com/index.php/REST_API_Users
   class User < Resource
-    map :first_name, :firstName
-    map :last_name,  :lastName
-
     ##
     # Will return a {Boolean} deferred object containing the result
     #

@@ -2,9 +2,7 @@ require 'test_helper'
 
 describe Amiando::Resource do
   class Wadus < Amiando::Resource
-    map :first_name, :firstName
-    map :last_name , :lastName
-    map :creation, :creation, :type => :time
+    map :creation, :creationTime, :type => :time
 
     def self.create(params = {})
       object = new
@@ -82,7 +80,7 @@ describe Amiando::Resource do
 
   it 'maps attributes with typecasting' do
     time      = Time.at(0).utc
-    expected  = { :creation => '1970-01-01T00:00:00Z' }
+    expected  = { :creationTime => '1970-01-01T00:00:00Z' }
     Wadus.map_params(:creation => time).must_equal expected
   end
 
@@ -94,7 +92,7 @@ describe Amiando::Resource do
 
   it 'reverse maps attributes with typecasting' do
     time      = Time.at(0).utc
-    expected  = { :creation_time => time }
+    expected  = { :creation => time }
     Wadus.reverse_map_params(:creationTime => '1970-01-01T00:00:00Z').must_equal expected
   end
 
