@@ -1,0 +1,60 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 0.042475
+body: "{\"id\":253977,\"success\":true,\"apiKey\":{\"id\":253977,\"enabled\":true,\"name\":\"wadus\",\"identifier\":\"epEvQFkrZyvmsApB\",\"key\":\"8JNaWQptCQVHY9OaOACWpqY0H3QGzaIerjXhUow596156MvpLD\"}}"
+code: 201
+connect_time: 0.022772
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/apiKey/create?format=json&version=1
+first_header_line: HTTP/1.1 201 Created
+headers: |
+  HTTP/1.1 201 Created
+  Date: Mon, 07 May 2012 14:10:03 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=6F4C7F7722A8713165F0452E2FA8429A.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=6F4C7F7722A8713165F0452E2FA8429A.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=cUZpQlRrdU1Cb1UwbENudzoxMzM3NjA5ODc4OTExOjEwYjEzNTE0MTA5Zjk2YzFkNjI0ODA0MDgwZjRlZTBl; Expires=Sat, 06-May-2017 14:17:58 GMT; Path=/
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Mon, 07 May 2012 16:10:03 GMT
+  Vary: User-Agent
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::NormalizedHeaderHash 
+  Date: Mon, 07 May 2012 14:10:03 GMT
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Vary: User-Agent
+  Server: Apache/2.0.55 (Red Hat)
+  Transfer-Encoding: chunked
+  Accept-Charset: utf-8
+  Access-Control-Allow-Origin: "*"
+  Expires: Mon, 07 May 2012 16:10:03 GMT
+  Cache-Control: max-age=7200
+  Content-Type: application/json;charset=UTF-8
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Accept-Ranges: bytes
+  Set-Cookie: 
+  - JSESSIONID=6F4C7F7722A8713165F0452E2FA8429A.web01; Path=/; Secure
+  - JSESSIONID=6F4C7F7722A8713165F0452E2FA8429A.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=cUZpQlRrdU1Cb1UwbENudzoxMzM3NjA5ODc4OTExOjEwYjEzNTE0MTA5Zjk2YzFkNjI0ODA0MDgwZjRlZTBl; Expires=Sat, 06-May-2017 14:17:58 GMT; Path=/
+http_version: 
+mock: false
+name_lookup_time: 2.8e-05
+pretransfer_time: 0.042478
+primary_ip: 213.61.176.214
+request: |-
+  :method => :post,
+  	:url => https://test.amiando.com/api/apiKey/create?format=json&version=1,
+  	:params => {:name=>"wadus"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.134032
+status_message: Created
+time: 0.134095

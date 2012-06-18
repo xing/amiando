@@ -1,0 +1,60 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 4.4e-05
+body: "{\"id\":480548,\"success\":true}"
+code: 201
+connect_time: 4.4e-05
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/event/create?apikey=MjIurHI3QKpVHwBVxwaNQvYX3vxp8T5tH5hFhX4chUmxjEGNa2&format=json&version=1
+first_header_line: HTTP/1.1 201 Created
+headers: |
+  HTTP/1.1 201 Created
+  Date: Mon, 07 May 2012 14:11:05 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=688B9ECC0DADB7FFC77BA2949ECB9CFA.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=688B9ECC0DADB7FFC77BA2949ECB9CFA.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=OGlTTFkxRHlLeGM5b0hWSToxMzM3NjA5OTQxMzk1OjY0ZjIyNjZhMzIwZjIxMDI5YzZkMzUzMmIzOTVlNTEy; Expires=Sat, 06-May-2017 14:19:01 GMT; Path=/
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Mon, 07 May 2012 16:11:05 GMT
+  Vary: User-Agent
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::NormalizedHeaderHash 
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Accept-Charset: utf-8
+  Server: Apache/2.0.55 (Red Hat)
+  Date: Mon, 07 May 2012 14:11:05 GMT
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Content-Type: application/json;charset=UTF-8
+  Access-Control-Allow-Origin: "*"
+  Expires: Mon, 07 May 2012 16:11:05 GMT
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Set-Cookie: 
+  - JSESSIONID=688B9ECC0DADB7FFC77BA2949ECB9CFA.web01; Path=/; Secure
+  - JSESSIONID=688B9ECC0DADB7FFC77BA2949ECB9CFA.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=OGlTTFkxRHlLeGM5b0hWSToxMzM3NjA5OTQxMzk1OjY0ZjIyNjZhMzIwZjIxMDI5YzZkMzUzMmIzOTVlNTEy; Expires=Sat, 06-May-2017 14:19:01 GMT; Path=/
+  Transfer-Encoding: chunked
+  Vary: User-Agent
+http_version: 
+mock: false
+name_lookup_time: 4.4e-05
+pretransfer_time: 5.1e-05
+primary_ip: 213.61.176.214
+request: |-
+  :method => :post,
+  	:url => https://test.amiando.com/api/event/create?apikey=MjIurHI3QKpVHwBVxwaNQvYX3vxp8T5tH5hFhX4chUmxjEGNa2&format=json&version=1,
+  	:params => {:hostId=>256587739, :country=>"es", :title=>"Long title wadus bang bang bang", :selectedDate=>"1970-01-01T00:00:00Z"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.678548
+status_message: Created
+time: 0.678626

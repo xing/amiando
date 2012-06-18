@@ -1,0 +1,62 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 3.4e-05
+body: "{\"errors\":[\"com.amiando.api.rest.InvalidPassword\"],\"success\":false}"
+code: 400
+connect_time: 3.4e-05
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/user/256587749/requestPermission?apikey=r4kcd5Wj0XcOoMr7d4AEEtuPV7p5XAIHkFU7iJWZxglR90MFCY&format=json&version=1
+first_header_line: HTTP/1.1 400 Bad Request
+headers: |
+  HTTP/1.1 400 Bad Request
+  Date: Mon, 07 May 2012 14:11:18 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=91739257A10DFED79189C42655859F2B.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=91739257A10DFED79189C42655859F2B.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=NXo3Y25EZjB4V1VZc01uMDoxMzM3NjA5OTUzNjE2OjgxNGRjYTZhMzJmZWFmNDhlYjk2NmU1MDZmOWM4ZDFl; Expires=Sat, 06-May-2017 14:19:13 GMT; Path=/
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Mon, 07 May 2012 16:11:18 GMT
+  Vary: User-Agent
+  Connection: close
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::NormalizedHeaderHash 
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Accept-Charset: utf-8
+  Server: Apache/2.0.55 (Red Hat)
+  Date: Mon, 07 May 2012 14:11:18 GMT
+  Connection: close
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Content-Type: application/json;charset=UTF-8
+  Access-Control-Allow-Origin: "*"
+  Expires: Mon, 07 May 2012 16:11:18 GMT
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Set-Cookie: 
+  - JSESSIONID=91739257A10DFED79189C42655859F2B.web01; Path=/; Secure
+  - JSESSIONID=91739257A10DFED79189C42655859F2B.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=NXo3Y25EZjB4V1VZc01uMDoxMzM3NjA5OTUzNjE2OjgxNGRjYTZhMzJmZWFmNDhlYjk2NmU1MDZmOWM4ZDFl; Expires=Sat, 06-May-2017 14:19:13 GMT; Path=/
+  Transfer-Encoding: chunked
+  Vary: User-Agent
+http_version: 
+mock: false
+name_lookup_time: 3.3e-05
+pretransfer_time: 3.9e-05
+primary_ip: 213.61.176.214
+request: |-
+  :method => :post,
+  	:url => https://test.amiando.com/api/user/256587749/requestPermission?apikey=r4kcd5Wj0XcOoMr7d4AEEtuPV7p5XAIHkFU7iJWZxglR90MFCY&format=json&version=1,
+  	:params => {:password=>"wrong password"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.038362
+status_message: Bad Request
+time: 0.038396

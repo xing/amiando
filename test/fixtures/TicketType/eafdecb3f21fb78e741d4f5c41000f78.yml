@@ -1,0 +1,62 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 3.7e-05
+body: "{\"errors\":[\"com.amiando.api.rest.ticketType.TicketTypeAlreadyExists\"],\"success\":false}"
+code: 400
+connect_time: 3.7e-05
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/event/480556/ticketType/create?apikey=MjIurHI3QKpVHwBVxwaNQvYX3vxp8T5tH5hFhX4chUmxjEGNa2&format=json&version=1
+first_header_line: HTTP/1.1 400 Bad Request
+headers: |
+  HTTP/1.1 400 Bad Request
+  Date: Mon, 07 May 2012 14:11:15 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=2C3EE696DCC1AD0A1E890EA0A8E65C39.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=2C3EE696DCC1AD0A1E890EA0A8E65C39.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=M2dGMlJhM1dvZ2FacTl3MzoxMzM3NjA5OTUxMDc1OjFlMDViYTMzNTI0ZDlmNzczNWJlYzEyNGEyZmU3ZDg3; Expires=Sat, 06-May-2017 14:19:11 GMT; Path=/
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Mon, 07 May 2012 16:11:15 GMT
+  Vary: User-Agent
+  Connection: close
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::NormalizedHeaderHash 
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Accept-Charset: utf-8
+  Server: Apache/2.0.55 (Red Hat)
+  Date: Mon, 07 May 2012 14:11:15 GMT
+  Connection: close
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Content-Type: application/json;charset=UTF-8
+  Access-Control-Allow-Origin: "*"
+  Expires: Mon, 07 May 2012 16:11:15 GMT
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Set-Cookie: 
+  - JSESSIONID=2C3EE696DCC1AD0A1E890EA0A8E65C39.web01; Path=/; Secure
+  - JSESSIONID=2C3EE696DCC1AD0A1E890EA0A8E65C39.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=M2dGMlJhM1dvZ2FacTl3MzoxMzM3NjA5OTUxMDc1OjFlMDViYTMzNTI0ZDlmNzczNWJlYzEyNGEyZmU3ZDg3; Expires=Sat, 06-May-2017 14:19:11 GMT; Path=/
+  Transfer-Encoding: chunked
+  Vary: User-Agent
+http_version: 
+mock: false
+name_lookup_time: 3.6e-05
+pretransfer_time: 4.1e-05
+primary_ip: 213.61.176.214
+request: |-
+  :method => :post,
+  	:url => https://test.amiando.com/api/event/480556/ticketType/create?apikey=MjIurHI3QKpVHwBVxwaNQvYX3vxp8T5tH5hFhX4chUmxjEGNa2&format=json&version=1,
+  	:params => {:type=>"TICKETTYPE_PAPER"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.059995
+status_message: Bad Request
+time: 0.06003

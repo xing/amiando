@@ -1,0 +1,60 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 0.042327
+body: "{\"ticketCategory\":{\"minSellRequired\":false,\"status\":\"STATUS_SELLING\",\"available\":1,\"displayPrice\":false,\"id\":1506181,\"price\":50,\"priceEditable\":true,\"name\":\"Name\",\"displayQuantity\":false,\"active\":true,\"reservedCount\":0,\"defaultValue\":0,\"sold\":0},\"success\":true}"
+code: 200
+connect_time: 0.022199
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/ticketCategory/1506181?apikey=MjIurHI3QKpVHwBVxwaNQvYX3vxp8T5tH5hFhX4chUmxjEGNa2&format=json&version=1
+first_header_line: HTTP/1.1 200 OK
+headers: |
+  HTTP/1.1 200 OK
+  Date: Mon, 07 May 2012 14:11:12 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=20DBFD7FCC084C5610A4C86C8DB75341.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=20DBFD7FCC084C5610A4C86C8DB75341.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=d2s0SjQ3R0ZZcjJ3OTAxZzoxMzM3NjA5OTQ4Mjg5OjkzODQ5N2Y5ODU3YzI1MzFkM2JkYjZiMTEzODI2NDcy; Expires=Sat, 06-May-2017 14:19:08 GMT; Path=/
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Mon, 07 May 2012 16:11:12 GMT
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::NormalizedHeaderHash 
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Accept-Charset: utf-8
+  Server: Apache/2.0.55 (Red Hat)
+  Date: Mon, 07 May 2012 14:11:12 GMT
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Content-Type: application/json;charset=UTF-8
+  Access-Control-Allow-Origin: "*"
+  Expires: Mon, 07 May 2012 16:11:12 GMT
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Set-Cookie: 
+  - JSESSIONID=20DBFD7FCC084C5610A4C86C8DB75341.web01; Path=/; Secure
+  - JSESSIONID=20DBFD7FCC084C5610A4C86C8DB75341.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=d2s0SjQ3R0ZZcjJ3OTAxZzoxMzM3NjA5OTQ4Mjg5OjkzODQ5N2Y5ODU3YzI1MzFkM2JkYjZiMTEzODI2NDcy; Expires=Sat, 06-May-2017 14:19:08 GMT; Path=/
+  Transfer-Encoding: chunked
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+http_version: 
+mock: false
+name_lookup_time: 1.6e-05
+pretransfer_time: 0.042331
+primary_ip: 213.61.176.214
+request: |-
+  :method => :get,
+  	:url => https://test.amiando.com/api/ticketCategory/1506181?apikey=MjIurHI3QKpVHwBVxwaNQvYX3vxp8T5tH5hFhX4chUmxjEGNa2&format=json&version=1,
+  	:params => {:apikey=>"MjIurHI3QKpVHwBVxwaNQvYX3vxp8T5tH5hFhX4chUmxjEGNa2", :format=>:json, :version=>1}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.146438
+status_message: OK
+time: 0.146501
