@@ -9,11 +9,18 @@ describe Amiando::Public::Event do
     HydraCache.prefix = nil
   end
 
-  describe 'search' do
+  it 'filters by start date' do
+    date = Time.parse("2012-06-18")
 
-  end
+    events = Amiando::Public::Event.search(:start_date => date)
 
-  describe 'find' do
+    Amiando.run
+    id = events.result.first
 
+    event = Amiando::Public::Event.find(id)
+    Amiando.run
+
+    event.id.must_equal id
+    event.selected_date.must_be :>=, date
   end
 end
