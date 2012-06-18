@@ -20,6 +20,10 @@ module Amiando
   autoload :PaymentType,    'amiando/payment_type'
   autoload :TicketType,     'amiando/ticket_type'
 
+  module Public
+    autoload :Event,        'amiando/public/event'
+  end
+
   class Error < StandardError
     class ServiceDown    < Error; end
     class Timeout        < Error; end
