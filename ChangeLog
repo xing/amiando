@@ -1,0 +1,5 @@
+2012-06-18  Jorge Dias  <jorge@mrdias.com>
+
+	* Version 0.4.0
+	* Extracted hydra_cache gem
+	* Public events available
