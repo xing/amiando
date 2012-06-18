@@ -5,10 +5,17 @@ module Amiando
       map :selected_end_date, :selectedEndDate,  :type => :time
 
       ##
-      # Query the public api. See the documentation [missing] for possible
-      # filter parameters.
+      # Query the public api.
       #
-      # @return [Result] with a list of event ids
+      # @param [Hash] options
+      #
+      # Possible filter parameters are:
+      # * start_date
+      # * end_date
+      # * language
+      # * offset
+      #
+      # @return [Result] with a list of event ids (up to 100 per request)
       def self.search(options = {})
         object = Result.new do |response_body|
           response_body['ids']
