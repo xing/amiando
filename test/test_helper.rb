@@ -15,18 +15,19 @@ begin
   MiniTest::Unit.runner.reporters << MiniTest::Reporters::SpecReporter.new
 rescue LoadError; end
 
-require 'support/hydra_cache'
+require 'hydra_cache'
 require 'support/factory'
 require 'support/hydra_monkey_patch'
 
 Amiando.send(:hydra).cache_setter &HydraCache.method(:setter)
 Amiando.send(:hydra).cache_getter &HydraCache.method(:getter)
-HydraCache.revision = 2
+HydraCache.revision = 4
+HydraCache.prefix = 'Global'
+HydraCache.fixtures_path = 'test/fixtures'
 
 WebMock.allow_net_connect!
 Amiando.verbose = true
 
-HydraCache.prefix = 'Global'
 
 module Amiando
   self.api_key = TEST_KEY = Amiando::Factory.create(:api_key, :name => 'test key').key

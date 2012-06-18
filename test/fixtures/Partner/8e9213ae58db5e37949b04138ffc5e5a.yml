@@ -1,0 +1,62 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 0.0421
+body: "{\"errors\":[\"com.amiando.api.rest.MissingParam.adminId\"],\"success\":false}"
+code: 400
+connect_time: 0.022245
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/partner/create?apikey=0jEs3x8QH0p7SAbCv9WAMKukUYjAO5GPMf0VQ888U5iYdI8x8y&format=json&version=1
+first_header_line: HTTP/1.1 400 Bad Request
+headers: |
+  HTTP/1.1 400 Bad Request
+  Date: Mon, 07 May 2012 14:10:21 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=AF76D770E465F77931B74336EB043428.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=AF76D770E465F77931B74336EB043428.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=UXU0cFhrcVliMGk4Qm10VDoxMzM3NjA5ODk3MTczOmJkOTdiZDM2MmZjZWRkNWNkOGJlYjhmMDAyM2JjYzhh; Expires=Sat, 06-May-2017 14:18:17 GMT; Path=/
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Mon, 07 May 2012 16:10:21 GMT
+  Vary: User-Agent
+  Connection: close
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::NormalizedHeaderHash 
+  Date: Mon, 07 May 2012 14:10:21 GMT
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Vary: User-Agent
+  Server: Apache/2.0.55 (Red Hat)
+  Transfer-Encoding: chunked
+  Accept-Charset: utf-8
+  Access-Control-Allow-Origin: "*"
+  Expires: Mon, 07 May 2012 16:10:21 GMT
+  Cache-Control: max-age=7200
+  Content-Type: application/json;charset=UTF-8
+  Connection: close
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Accept-Ranges: bytes
+  Set-Cookie: 
+  - JSESSIONID=AF76D770E465F77931B74336EB043428.web01; Path=/; Secure
+  - JSESSIONID=AF76D770E465F77931B74336EB043428.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=UXU0cFhrcVliMGk4Qm10VDoxMzM3NjA5ODk3MTczOmJkOTdiZDM2MmZjZWRkNWNkOGJlYjhmMDAyM2JjYzhh; Expires=Sat, 06-May-2017 14:18:17 GMT; Path=/
+http_version: 
+mock: false
+name_lookup_time: 1.7e-05
+pretransfer_time: 0.042102
+primary_ip: 213.61.176.214
+request: |-
+  :method => :post,
+  	:url => https://test.amiando.com/api/partner/create?apikey=0jEs3x8QH0p7SAbCv9WAMKukUYjAO5GPMf0VQ888U5iYdI8x8y&format=json&version=1,
+  	:params => {:adminId=>nil, :defaultCountry=>"ES", :name=>"to be found", :language=>"en"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.133393
+status_message: Bad Request
+time: 0.133435
