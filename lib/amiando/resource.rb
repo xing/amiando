@@ -127,6 +127,10 @@ module Amiando
       @attributes[key.to_sym]
     end
 
+    def respond_to?(method_name, include_private = false)
+      super || attributes.key?(method_name)
+    end
+
     def method_missing(method_name, *args, &block)
       if attributes.key?(method_name) && args.empty?
         attributes[method_name]
