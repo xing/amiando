@@ -1,0 +1,61 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 3.9e-05
+body: "{\"id\":483213,\"success\":true}"
+code: 201
+connect_time: 3.9e-05
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/event/create?apikey=qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE&version=1&format=json
+first_header_line: HTTP/1.1 201 Created
+headers: |
+  HTTP/1.1 201 Created
+  Date: Thu, 21 Jun 2012 07:27:20 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=DE11D567DA797010322F8E218C78517B.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=DE11D567DA797010322F8E218C78517B.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=U3I1Y09LYlhqQTVocjZNajoxMzQxNDczNjYxNTM3OmUyNjI3N2JlZWQwZjM5OTBhODdlNTY0ZjA4NTQ1OWEx; Expires=Tue, 20-Jun-2017 07:34:21 GMT; Path=/
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Thu, 21 Jun 2012 09:27:20 GMT
+  Vary: User-Agent
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::Header 
+  Cache-Control: max-age=7200
+  Date: Thu, 21 Jun 2012 07:27:20 GMT
+  Access-Control-Allow-Origin: "*"
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Vary: User-Agent
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Content-Type: application/json;charset=UTF-8
+  Accept-Ranges: bytes
+  Transfer-Encoding: chunked
+  Expires: Thu, 21 Jun 2012 09:27:20 GMT
+  Accept-Charset: utf-8
+  Set-Cookie: 
+  - JSESSIONID=DE11D567DA797010322F8E218C78517B.web01; Path=/; Secure
+  - JSESSIONID=DE11D567DA797010322F8E218C78517B.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=U3I1Y09LYlhqQTVocjZNajoxMzQxNDczNjYxNTM3OmUyNjI3N2JlZWQwZjM5OTBhODdlNTY0ZjA4NTQ1OWEx; Expires=Tue, 20-Jun-2017 07:34:21 GMT; Path=/
+  Server: Apache/2.0.55 (Red Hat)
+http_version: 
+mock: false
+name_lookup_time: 3.9e-05
+pretransfer_time: 4.7e-05
+primary_ip: 213.61.176.214
+redirect_count: 0
+request: |-
+  :method => :post,
+  	:url => https://test.amiando.com/api/event/create?apikey=qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE&version=1&format=json,
+  	:params => {:country=>"es", :hostId=>256615765, :selectedDate=>"1970-01-01T00:00:00Z", :identifier=>"event-identifier-update-5", :title=>"wadus"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.60578
+status_message: Created
+time: 0.606452

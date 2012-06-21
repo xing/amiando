@@ -21,7 +21,7 @@ require 'support/hydra_monkey_patch'
 
 Amiando.send(:hydra).cache_setter &HydraCache.method(:setter)
 Amiando.send(:hydra).cache_getter &HydraCache.method(:getter)
-HydraCache.revision = 4
+HydraCache.revision = 5
 HydraCache.prefix = 'Global'
 HydraCache.fixtures_path = 'test/fixtures'
 

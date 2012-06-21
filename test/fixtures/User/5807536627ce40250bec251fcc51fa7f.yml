@@ -1,0 +1,61 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 4.1e-05
+body: "{\"success\":true,\"user\":{\"id\":256615772,\"lastName\":\"Llop\",\"timezone\":\"Europe/Berlin\",\"username\":\"jorgellop-find-5@example.com\",\"lastModified\":\"2012-06-21T09:34:40\",\"email\":\"jorgellop-find-5@example.com\",\"signupTime\":\"2012-06-21T09:34:40\",\"creationTime\":\"2012-06-21T09:34:40\",\"language\":\"es\",\"firstName\":\"Jorge\"}}"
+code: 200
+connect_time: 4.1e-05
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/user/256615772?apikey=qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE&format=json&version=1
+first_header_line: HTTP/1.1 200 OK
+headers: |
+  HTTP/1.1 200 OK
+  Date: Thu, 21 Jun 2012 07:27:40 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=CA12226013D886C96C6CAC937C878591.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=CA12226013D886C96C6CAC937C878591.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=S29uTUZHa003YTBvMkJBbzoxMzQxNDczNjgxNjEzOjI5OThkM2I2NWQwMGEyYjU0MGJhYTEyNTJhZjRhN2Zj; Expires=Tue, 20-Jun-2017 07:34:41 GMT; Path=/
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Thu, 21 Jun 2012 09:27:40 GMT
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::Header 
+  Cache-Control: max-age=7200
+  Date: Thu, 21 Jun 2012 07:27:40 GMT
+  Access-Control-Allow-Origin: "*"
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Content-Type: application/json;charset=UTF-8
+  Accept-Ranges: bytes
+  Transfer-Encoding: chunked
+  Expires: Thu, 21 Jun 2012 09:27:40 GMT
+  Accept-Charset: utf-8
+  Set-Cookie: 
+  - JSESSIONID=CA12226013D886C96C6CAC937C878591.web01; Path=/; Secure
+  - JSESSIONID=CA12226013D886C96C6CAC937C878591.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=S29uTUZHa003YTBvMkJBbzoxMzQxNDczNjgxNjEzOjI5OThkM2I2NWQwMGEyYjU0MGJhYTEyNTJhZjRhN2Zj; Expires=Tue, 20-Jun-2017 07:34:41 GMT; Path=/
+  Server: Apache/2.0.55 (Red Hat)
+http_version: 
+mock: false
+name_lookup_time: 4.1e-05
+pretransfer_time: 4.7e-05
+primary_ip: 213.61.176.214
+redirect_count: 0
+request: |-
+  :method => :get,
+  	:url => https://test.amiando.com/api/user/256615772?apikey=qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE&format=json&version=1,
+  	:params => {:format=>:json, :version=>1, :apikey=>"qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.080998
+status_message: OK
+time: 0.081762

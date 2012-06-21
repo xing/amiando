@@ -1,0 +1,61 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 3.4e-05
+body: "{\"ids\":[360101,480967,480919,480930,480931,481210,481212,481242,481243,481244,481245,481246,481247,481248,481251,481252,481253,481255,481256,481259,481261,481262,481263,481264,481265,481266,481267,481268,481269,481271,481274,481275,481465,481586,481587,481588,481589,481590,481591,481592,481593,481594,481595,481596,481597,481598,481599,481600,481602,481603,481605,481606,481607,481608,481609,481610,481613,481614,481617,481619,481620,481621,481622,481624,481626,481627,481628,481629,481630,481632,481634,481637,481640,481642,481667,481668,481671,481684,481685,481686,481692,481693,481701,481702,481703,481704,481706,481707,481708,481709,481710,481711,481713,481714,481715,481716,481717,481740,481741,481742],\"success\":true}"
+code: 200
+connect_time: 3.4e-05
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/public/event/findPublic?apikey=qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE&format=json&startDate=2012-06-18T00%3A00%3A00%2B02%3A00&version=1
+first_header_line: HTTP/1.1 200 OK
+headers: |
+  HTTP/1.1 200 OK
+  Date: Thu, 21 Jun 2012 07:27:26 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=7CA02DA440530EFF60C91765D08AB1E6.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=7CA02DA440530EFF60C91765D08AB1E6.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=Z05lRjBQU1hpcUdrTTR0QToxMzQxNDczNjY3MzA5OjMxYjQ3YjYzNjY2NzU4M2E5YTY5ZDY2YjljZWVlODUz; Expires=Tue, 20-Jun-2017 07:34:27 GMT; Path=/
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Thu, 21 Jun 2012 09:27:26 GMT
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::Header 
+  Cache-Control: max-age=7200
+  Date: Thu, 21 Jun 2012 07:27:26 GMT
+  Access-Control-Allow-Origin: "*"
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Content-Type: application/json;charset=UTF-8
+  Accept-Ranges: bytes
+  Transfer-Encoding: chunked
+  Expires: Thu, 21 Jun 2012 09:27:26 GMT
+  Accept-Charset: utf-8
+  Set-Cookie: 
+  - JSESSIONID=7CA02DA440530EFF60C91765D08AB1E6.web01; Path=/; Secure
+  - JSESSIONID=7CA02DA440530EFF60C91765D08AB1E6.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=Z05lRjBQU1hpcUdrTTR0QToxMzQxNDczNjY3MzA5OjMxYjQ3YjYzNjY2NzU4M2E5YTY5ZDY2YjljZWVlODUz; Expires=Tue, 20-Jun-2017 07:34:27 GMT; Path=/
+  Server: Apache/2.0.55 (Red Hat)
+http_version: 
+mock: false
+name_lookup_time: 3.3e-05
+pretransfer_time: 4.0e-05
+primary_ip: 213.61.176.214
+redirect_count: 0
+request: |-
+  :method => :get,
+  	:url => https://test.amiando.com/api/public/event/findPublic?apikey=qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE&format=json&startDate=2012-06-18T00%3A00%3A00%2B02%3A00&version=1,
+  	:params => {:startDate=>"2012-06-18T00:00:00+02:00", :format=>:json, :version=>1, :apikey=>"qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.798597
+status_message: OK
+time: 0.799253

@@ -1,0 +1,61 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 3.7e-05
+body: "{\"ticketShop\":{\"shipmentFeeInclusive\":true,\"showAvailableTickets\":true,\"numTicketsChecked\":0,\"ticketBaseFee\":99,\"productDisagio\":590,\"ticketsTransferable\":false,\"currency\":\"USD\",\"id\":335200,\"totalFees\":0,\"totalIncome\":0,\"cancelationPossible\":false,\"collectUserData\":false,\"feeInclusive\":true,\"numTicketsSold\":0,\"maxPossibleNumberOfParticipants\":0,\"disagio\":590,\"commercial\":false},\"success\":true}"
+code: 200
+connect_time: 3.7e-05
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/event/483218/ticketShop?apikey=qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE&format=json&version=1
+first_header_line: HTTP/1.1 200 OK
+headers: |
+  HTTP/1.1 200 OK
+  Date: Thu, 21 Jun 2012 07:27:32 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=43B1A193043DFA0422710A2330F342C0.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=43B1A193043DFA0422710A2330F342C0.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=SlFKY1hPQ1dSVThwVnVjZjoxMzQxNDczNjczMjc5OjA2YzA1YTEwZjcyNDg5MjAxMWI2ZjAyMmRmNGJjYzA3; Expires=Tue, 20-Jun-2017 07:34:33 GMT; Path=/
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Thu, 21 Jun 2012 09:27:32 GMT
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::Header 
+  Cache-Control: max-age=7200
+  Date: Thu, 21 Jun 2012 07:27:32 GMT
+  Access-Control-Allow-Origin: "*"
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Content-Type: application/json;charset=UTF-8
+  Accept-Ranges: bytes
+  Transfer-Encoding: chunked
+  Expires: Thu, 21 Jun 2012 09:27:32 GMT
+  Accept-Charset: utf-8
+  Set-Cookie: 
+  - JSESSIONID=43B1A193043DFA0422710A2330F342C0.web01; Path=/; Secure
+  - JSESSIONID=43B1A193043DFA0422710A2330F342C0.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=SlFKY1hPQ1dSVThwVnVjZjoxMzQxNDczNjczMjc5OjA2YzA1YTEwZjcyNDg5MjAxMWI2ZjAyMmRmNGJjYzA3; Expires=Tue, 20-Jun-2017 07:34:33 GMT; Path=/
+  Server: Apache/2.0.55 (Red Hat)
+http_version: 
+mock: false
+name_lookup_time: 3.7e-05
+pretransfer_time: 4.3e-05
+primary_ip: 213.61.176.214
+redirect_count: 0
+request: |-
+  :method => :get,
+  	:url => https://test.amiando.com/api/event/483218/ticketShop?apikey=qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE&format=json&version=1,
+  	:params => {:format=>:json, :version=>1, :apikey=>"qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.083324
+status_message: OK
+time: 0.084171

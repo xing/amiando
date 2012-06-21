@@ -1,0 +1,61 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 3.4e-05
+body: "{\"results\":{\"availablePaymentTypes\":[\"PAYMENT_TYPE_PREPAYMENT\",\"PAYMENT_TYPE_PP\",\"PAYMENT_TYPE_INVOICE\",\"PAYMENT_TYPE_CC\",\"PAYMENT_TYPE_ONLOCATION\"],\"paymentTypes\":[{\"id\":1201761,\"active\":true,\"type\":\"PAYMENT_TYPE_INVOICE\"},{\"id\":1201760,\"active\":true,\"type\":\"PAYMENT_TYPE_PP\"},{\"id\":1201759,\"active\":true,\"type\":\"PAYMENT_TYPE_CC\"},{\"id\":1201758,\"active\":true,\"type\":\"PAYMENT_TYPE_PREPAYMENT\"}]},\"success\":true}"
+code: 200
+connect_time: 3.4e-05
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/event/483214/paymentTypes?apikey=qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE&format=json&version=1
+first_header_line: HTTP/1.1 200 OK
+headers: |
+  HTTP/1.1 200 OK
+  Date: Thu, 21 Jun 2012 07:27:25 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=7602EAEA65E46909256B225ABCB94725.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=7602EAEA65E46909256B225ABCB94725.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=dW1mZHBpZm1mNUI3eDRsTzoxMzQxNDczNjY2NDUwOjNlMGYxN2YwYzgxMWY2MThlZDAxYTFiNWI1OTY2NTBm; Expires=Tue, 20-Jun-2017 07:34:26 GMT; Path=/
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Thu, 21 Jun 2012 09:27:25 GMT
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::Header 
+  Cache-Control: max-age=7200
+  Date: Thu, 21 Jun 2012 07:27:25 GMT
+  Access-Control-Allow-Origin: "*"
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Content-Type: application/json;charset=UTF-8
+  Accept-Ranges: bytes
+  Transfer-Encoding: chunked
+  Expires: Thu, 21 Jun 2012 09:27:25 GMT
+  Accept-Charset: utf-8
+  Set-Cookie: 
+  - JSESSIONID=7602EAEA65E46909256B225ABCB94725.web01; Path=/; Secure
+  - JSESSIONID=7602EAEA65E46909256B225ABCB94725.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=dW1mZHBpZm1mNUI3eDRsTzoxMzQxNDczNjY2NDUwOjNlMGYxN2YwYzgxMWY2MThlZDAxYTFiNWI1OTY2NTBm; Expires=Tue, 20-Jun-2017 07:34:26 GMT; Path=/
+  Server: Apache/2.0.55 (Red Hat)
+http_version: 
+mock: false
+name_lookup_time: 3.4e-05
+pretransfer_time: 4.0e-05
+primary_ip: 213.61.176.214
+redirect_count: 0
+request: |-
+  :method => :get,
+  	:url => https://test.amiando.com/api/event/483214/paymentTypes?apikey=qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE&format=json&version=1,
+  	:params => {:format=>:json, :version=>1, :apikey=>"qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.098699
+status_message: OK
+time: 0.099353

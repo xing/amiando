@@ -1,0 +1,61 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 3.8e-05
+body: "{\"paymentType\":{\"id\":1201761,\"active\":true,\"type\":\"PAYMENT_TYPE_INVOICE\"},\"success\":true}"
+code: 200
+connect_time: 3.8e-05
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/paymentType/1201761?apikey=qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE&format=json&version=1
+first_header_line: HTTP/1.1 200 OK
+headers: |
+  HTTP/1.1 200 OK
+  Date: Thu, 21 Jun 2012 07:27:25 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=3A21BB83EC3328F79F17D87E569211A1.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=3A21BB83EC3328F79F17D87E569211A1.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=ek1oeEZiaERac3N6UXV1ajoxMzQxNDczNjY2MzM3OjE3NDVlYjMxYTIwZDNkYjRmYTgxMDRhZWJiY2Q5N2Fk; Expires=Tue, 20-Jun-2017 07:34:26 GMT; Path=/
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Thu, 21 Jun 2012 09:27:25 GMT
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::Header 
+  Cache-Control: max-age=7200
+  Date: Thu, 21 Jun 2012 07:27:25 GMT
+  Access-Control-Allow-Origin: "*"
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Vary: Accept-Charset,Accept-Encoding,Accept-Language,Accept,User-Agent
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Content-Type: application/json;charset=UTF-8
+  Accept-Ranges: bytes
+  Transfer-Encoding: chunked
+  Expires: Thu, 21 Jun 2012 09:27:25 GMT
+  Accept-Charset: utf-8
+  Set-Cookie: 
+  - JSESSIONID=3A21BB83EC3328F79F17D87E569211A1.web01; Path=/; Secure
+  - JSESSIONID=3A21BB83EC3328F79F17D87E569211A1.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=ek1oeEZiaERac3N6UXV1ajoxMzQxNDczNjY2MzM3OjE3NDVlYjMxYTIwZDNkYjRmYTgxMDRhZWJiY2Q5N2Fk; Expires=Tue, 20-Jun-2017 07:34:26 GMT; Path=/
+  Server: Apache/2.0.55 (Red Hat)
+http_version: 
+mock: false
+name_lookup_time: 3.7e-05
+pretransfer_time: 4.6e-05
+primary_ip: 213.61.176.214
+redirect_count: 0
+request: |-
+  :method => :get,
+  	:url => https://test.amiando.com/api/paymentType/1201761?apikey=qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE&format=json&version=1,
+  	:params => {:format=>:json, :version=>1, :apikey=>"qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 0.098976
+status_message: OK
+time: 0.099694

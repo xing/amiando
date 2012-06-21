@@ -1,0 +1,61 @@
+--- !ruby/object:Typhoeus::Response 
+app_connect_time: 3.2e-05
+body: "{\"id\":256615772,\"success\":true}"
+code: 201
+connect_time: 3.2e-05
+curl_error_message: No error
+curl_return_code: 0
+effective_url: https://test.amiando.com/api/user/create?apikey=qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE&version=1&format=json
+first_header_line: HTTP/1.1 201 Created
+headers: |
+  HTTP/1.1 201 Created
+  Date: Thu, 21 Jun 2012 07:27:39 GMT
+  Server: Apache/2.0.55 (Red Hat)
+  Set-Cookie: JSESSIONID=B5A3DA02CA543B74FFE975E07DEA8C13.web01; Path=/; Secure
+  Set-Cookie: JSESSIONID=B5A3DA02CA543B74FFE975E07DEA8C13.web01; Path=/
+  accept-charset: utf-8
+  P3P: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Set-Cookie: ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=WU1ydFJEUURPUVNxV2dWODoxMzQxNDczNjgwNDI4OjJiMzZkZWVkZDU4NjE0N2ViYmI4ZDdhMzFmMjMzOGIz; Expires=Tue, 20-Jun-2017 07:34:40 GMT; Path=/
+  Accept-Ranges: bytes
+  Cache-Control: max-age=7200
+  Expires: Thu, 21 Jun 2012 09:27:39 GMT
+  Vary: User-Agent
+  Transfer-Encoding: chunked
+  Content-Type: application/json;charset=UTF-8
+  
+
+headers_hash: !map:Typhoeus::Header 
+  Cache-Control: max-age=7200
+  Date: Thu, 21 Jun 2012 07:27:39 GMT
+  Access-Control-Allow-Origin: "*"
+  P3p: policyref="/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD CON OUR IND UNI PUR COM CNT"
+  Vary: User-Agent
+  Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT
+  Content-Type: application/json;charset=UTF-8
+  Accept-Ranges: bytes
+  Transfer-Encoding: chunked
+  Expires: Thu, 21 Jun 2012 09:27:39 GMT
+  Accept-Charset: utf-8
+  Set-Cookie: 
+  - JSESSIONID=B5A3DA02CA543B74FFE975E07DEA8C13.web01; Path=/; Secure
+  - JSESSIONID=B5A3DA02CA543B74FFE975E07DEA8C13.web01; Path=/
+  - ANONYMOUS_HASHED_REMEMBER_ME_COOKIE_KEY=WU1ydFJEUURPUVNxV2dWODoxMzQxNDczNjgwNDI4OjJiMzZkZWVkZDU4NjE0N2ViYmI4ZDdhMzFmMjMzOGIz; Expires=Tue, 20-Jun-2017 07:34:40 GMT; Path=/
+  Server: Apache/2.0.55 (Red Hat)
+http_version: 
+mock: false
+name_lookup_time: 3.2e-05
+pretransfer_time: 3.9e-05
+primary_ip: 213.61.176.214
+redirect_count: 0
+request: |-
+  :method => :post,
+  	:url => https://test.amiando.com/api/user/create?apikey=qjphdq7wWaGQRfjA2xmZAyekT9iehhS75q8DVhrMLsYaYTXlOE&version=1&format=json,
+  	:params => {:password=>"123456", :firstName=>"Jorge", :username=>"jorgellop-find-5@example.com", :lastName=>"Llop", :language=>"es"}
+requested_http_method: 
+requested_url: 
+start_time: 
+start_transfer_time: 1.177865
+status_message: Created
+time: 1.17878
