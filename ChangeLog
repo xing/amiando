@@ -1,5 +1,10 @@
 2012-06-21  Albert Llop <mrsimo@gmail.com>
 
+	* Version 0.4.2
+	* Relaxed typhoeus version, 0.4 is only needed for running the tests
+
+2012-06-21  Albert Llop <mrsimo@gmail.com>
+
 	* Version 0.4.1
 	* Fixed typhoeus version to ~> 0.4.0
 	* respond_to? behaving properly (Jan Ahrens)
