@@ -10,7 +10,7 @@ describe Amiando::Public::Event do
   end
 
   it 'filters by start date' do
-    date = Time.parse("2012-06-18")
+    date = Time.utc(2012, 6, 18)
 
     events = Amiando::Public::Event.search(:start_date => date)
 
