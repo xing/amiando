@@ -109,6 +109,25 @@ describe Amiando::Resource do
     result.attributes.must_equal(:first_name => "George")
   end
 
+  describe 'respond_to behavior' do
+    def setup
+      stub_request(:any, /somewhere/).to_return(:status => 200, :body => '{"wadus":{"firstName":"George"}}')
+      @result = Wadus.sync_find(1)
+    end
+
+    it 'will return true for present attributes' do
+      @result.respond_to?(:first_name).must_equal true
+    end
+
+    it 'will return true for defined methods' do
+      @result.respond_to?(:populate).must_equal true
+    end
+
+    it 'will return false for not defined attributes' do
+      @result.respond_to?(:i_dont_exists).must_equal false
+    end
+  end
+
   describe 'synchronous calls' do
     it 'accepts synchronous calls' do
       stub_request(:post, /somewhere/).to_return(:status => 200, :body => '{"success":true}')
