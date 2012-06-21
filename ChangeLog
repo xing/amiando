@@ -1,3 +1,9 @@
+2012-06-21  Albert Llop <mrsimo@gmail.com>
+
+	* Version 0.4.1
+	* Fixed typhoeus version to ~> 0.4.0
+	* respond_to? behaving properly (Jan Ahrens)
+
 2012-06-18  Jorge Dias  <jorge@mrdias.com>
 
 	* Version 0.4.0
