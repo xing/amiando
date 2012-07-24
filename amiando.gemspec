@@ -20,8 +20,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'typhoeus'
   s.add_dependency 'multi_json'
-  s.add_dependency 'hydra_cache'
 
+  s.add_development_dependency 'hydra_cache'
   s.add_development_dependency 'minitest', '2.9.0'
   s.add_development_dependency 'webmock', '~> 1.7.9'
   s.add_development_dependency 'rake'
