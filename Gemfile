@@ -4,12 +4,12 @@ source "http://rubygems.org"
 gemspec
 
 unless ENV["TRAVIS"]
-  gem 'ruby-debug19', :platforms => :ruby_19
+  gem 'debugger',   :platforms => :ruby_19
   gem 'ruby-debug', :platforms => :mri_18
 end
 
 group :development do
-  gem 'minitest-reporters'
+  gem 'minitest-reporters', '= 0.8.0'
   gem 'guard-minitest'
   if RbConfig::CONFIG['target_os'] =~ /darwin/i
     gem 'rb-fsevent', '>= 0.4.0', :require => false
