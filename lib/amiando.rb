@@ -19,6 +19,7 @@ module Amiando
   autoload :TicketShop,     'amiando/ticket_shop'
   autoload :PaymentType,    'amiando/payment_type'
   autoload :TicketType,     'amiando/ticket_type'
+  autoload :Sync,           'amiando/sync'
 
   module Public
     autoload :Event,        'amiando/public/event'
