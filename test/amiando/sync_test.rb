@@ -25,8 +25,7 @@ describe Amiando::Sync do
 
   describe Amiando::Sync::Event do
     it 'simply converts the given attributes' do
-      sync_event = Amiando::Sync::Event.new
-      sync_event.populate(:id => 1, :path => '/some/thing')
+      sync_event = Amiando::Sync::Event.new(:id => 1, :path => '/some/thing')
 
       sync_event.id.must_equal 1
       sync_event.path.must_equal '/some/thing'

@@ -33,9 +33,7 @@ module Amiando
       object = Result.new do |response_body, result|
         if response_body["success"]
           events = response_body['events'].map do |event|
-            sync_event = Sync::Event.new
-            sync_event.populate(event)
-            sync_event
+            Sync::Event.new(event)
           end
           Sync.new(events, response_body['nextId'])
         else
@@ -61,11 +59,11 @@ module Amiando
     # * operation is what happened to that object. Typically 'create', 'delete'
     #   and 'update'. But beware the 'resync' one.
     #
-    class Event < Resource
-      def populate(response_body)
-        @attributes = {}
-        set_attributes(response_body)
-        @success = true
+    class Event
+      include Attributes
+
+      def initialize(hash)
+        set_attributes(hash)
       end
     end
   end
