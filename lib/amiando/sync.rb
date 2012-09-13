@@ -65,6 +65,10 @@ module Amiando
       def initialize(hash)
         set_attributes(hash)
       end
+
+      def object_id
+        attributes[:object_id]
+      end
     end
   end
 end
