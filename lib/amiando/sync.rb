@@ -66,8 +66,12 @@ module Amiando
         set_attributes(hash)
       end
 
-      def object_id
+      def obj_id
         attributes[:object_id]
+      end
+
+      def obj_type
+        attributes[:object_type]
       end
     end
   end
