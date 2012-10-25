@@ -1,3 +1,7 @@
+2012-10-25 Albert Llop <mrsimo@gmail.com>
+	* Version 0.5.0
+	* Had to rename some attributes for "Sync::Event", so the change isn't backwards compatible.
+
 2012-06-21  Albert Llop <mrsimo@gmail.com>
 
 	* Version 0.4.2
