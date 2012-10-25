@@ -78,7 +78,7 @@ module Amiando
       end
 
       def returned_obj_type
-        attributes[:returned_obj_type]
+        attributes[:returned_object_type]
       end
     end
   end

@@ -25,11 +25,18 @@ describe Amiando::Sync do
 
   describe Amiando::Sync::Event do
     it 'simply converts the given attributes' do
-      sync_event = Amiando::Sync::Event.new(:id => 1, :object_id => 12, :object_type => 'Event', :path => '/some/thing')
+      sync_event = Amiando::Sync::Event.new(
+        :id                   => 1,
+        :object_id            => 12,
+        :object_type          => 'Event',
+        :returned_object_type => 'Event',
+        :path                 => '/some/thing'
+      )
 
       sync_event.id.must_equal 1
       sync_event.obj_id.must_equal 12
       sync_event.obj_type.must_equal 'Event'
+      sync_event.returned_obj_type.must_equal 'Event'
       sync_event.path.must_equal '/some/thing'
     end
   end
