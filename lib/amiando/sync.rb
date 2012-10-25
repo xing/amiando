@@ -52,13 +52,16 @@ module Amiando
     #
     # You should use mainly 4 attributes:
     #
-    # * object_type and returned_object_type will allow you to know what kind
+    # * obj_type and returned_obj_type will allow you to know what kind
     #   of object you should be dealing with. Read through the official docs
     #   to know the difference between them.
-    # * object_id is the id of whichever object you're dealing with.
+    # * obj_id is the id of whichever object you're dealing with.
     # * operation is what happened to that object. Typically 'create', 'delete'
     #   and 'update'. But beware the 'resync' one.
     #
+    # Please note that the original api returns object_id, object_type and
+    # returned_object_type, but ruby 1.9 throws warnings if defining a method
+    # called object_id. All three have been ranemd for consistency.
     class Event
       include Attributes
 
@@ -72,6 +75,10 @@ module Amiando
 
       def obj_type
         attributes[:object_type]
+      end
+
+      def returned_obj_type
+        attributes[:returned_obj_type]
       end
     end
   end
