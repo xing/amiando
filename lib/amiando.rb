@@ -60,6 +60,9 @@ module Amiando
     # Used for statistics (time-bandits for example)
     attr_accessor :total_time, :total_requests
 
+    # Set default options for typhoeus
+    attr_accessor :default_options
+
     URL       = 'https://www.amiando.com'
     TEST_URL  = 'https://test.amiando.com'
 

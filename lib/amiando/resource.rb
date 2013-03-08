@@ -22,7 +22,8 @@ module Amiando
       private
 
       def do_request(object, verb, path, options = {})
-        req = Request.new(object, verb, path, map_params(options[:params] || {}))
+        options = options.merge Amiando.default_options if Amiando.default_options 
+        req = Request.new(object, verb, path, map_params(options[:params] || {}), options)
         object.request = req
 
         req.log_request

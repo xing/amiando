@@ -2,7 +2,7 @@ module Amiando
   class Request < Typhoeus::Request
     attr_reader :object
 
-    def initialize(object, verb, path, params)
+    def initialize(object, verb, path, params, options = {})
       @object = object
 
       if verb == :post
@@ -12,7 +12,8 @@ module Amiando
         params = default_params.merge(params || {})
       end
 
-      super(path, :method => verb, :params => params, :verbose => Amiando.verbose, :timeout => Amiando.timeout)
+      options = options.merge(:method => verb, :params => params, :verbose => Amiando.verbose, :timeout => Amiando.timeout)  
+      super(path, options)
     end
 
     def log_request
