@@ -3,6 +3,7 @@ require "typhoeus"
 require "multi_json"
 require "ostruct"
 require "benchmark"
+require "active_support/notifications"
 
 module Amiando
   autoload :Request,        'amiando/request'
@@ -57,9 +58,6 @@ module Amiando
     # Timeout value (in milliseconds). Default: 15 seconds.
     attr_accessor :timeout
 
-    # Used for statistics (time-bandits for example)
-    attr_accessor :total_time, :total_requests
-
     # Set default options for typhoeus
     attr_accessor :default_options
 
@@ -89,15 +87,13 @@ module Amiando
     def run
       exception = nil
       requests.each { |request| hydra.queue(request) }
-      @total_requests += requests.size
 
-      duration = Benchmark.realtime do
+      ActiveSupport::Notifications.instrument("run.amiando", :calls => requests.size) do
         begin
           hydra.run
         rescue Exception => exception
         end
       end
-      @total_time += duration
 
       raise exception if exception
     ensure
@@ -129,7 +125,4 @@ module Amiando
   ##
   # Default timeout of 15 seconds
   self.timeout = 15000
-
-  self.total_time     = 0.0
-  self.total_requests = 0
 end
